@@ -1,9 +1,6 @@
 package org.example.model;
 
-import java.io.Serializable;
-
-
-public abstract class Entity<ID extends Serializable> implements Serializable {
+public abstract class Entity<ID> {
     protected ID id;
 
     public Entity(ID id) {
