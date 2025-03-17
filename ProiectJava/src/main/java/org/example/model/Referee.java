@@ -2,39 +2,38 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class Albitru extends Entity<Long>{
-    private String nume;
-    private Proba proba;
+public class Referee extends Entity<Long>{
+    private String name;
+    private Event event;
     private String username;
     private String password;
 
-    public Albitru(){
+    public Referee(){
         super(null);
     }
 
-    public Albitru(Long id, String nume, Proba proba, String username, String password) {
+    public Referee(Long id, String name, Event event, String username, String password) {
         super(id);
-        this.nume = nume;
-        this.proba = proba;
+        this.name = name;
+        this.event = event;
         this.username = username;
         this.password = password;
     }
 
-
-    public String getNume() {
-        return nume;
+    public String getName() {
+        return name;
     }
 
-    public void setNume(String nume) {
-        this.nume = nume;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Proba getProba() {
-        return proba;
+    public Event getEvent() {
+        return event;
     }
 
-    public void setProba(Proba proba) {
-        this.proba = proba;
+    public void setEvent(Event event) {
+        this.event = event;
     }
 
     public String getUsername() {
@@ -58,20 +57,20 @@ public class Albitru extends Entity<Long>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Albitru albitru = (Albitru) o;
-        return Objects.equals(nume, albitru.nume) && Objects.equals(proba, albitru.proba) && Objects.equals(username, albitru.username) && Objects.equals(password, albitru.password);
+        Referee referee = (Referee) o;
+        return Objects.equals(name, referee.name) && Objects.equals(event, referee.event) && Objects.equals(username, referee.username) && Objects.equals(password, referee.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), nume, proba, username, password);
+        return Objects.hash(super.hashCode(), name, event, username, password);
     }
 
     @Override
     public String toString() {
-        return "Albitru{" +
-                "nume='" + nume + '\'' +
-                ", proba=" + proba +
+        return "Referee{" +
+                "name='" + name + '\'' +
+                ", event=" + event +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';

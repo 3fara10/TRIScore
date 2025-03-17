@@ -2,16 +2,24 @@ package org.example.model;
 
 import java.util.Objects;
 
-public class Participant extends Entity<Long>{
+public class Event extends Entity<Long>{
     private String name;
 
-    public Participant(Long id, String name) {
+    public Event() {
+        super(null);
+    }
+
+    public Event(Long id, String name) {
         super(id);
         this.name = name;
     }
 
-    public Participant() {
-        super(null);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -19,8 +27,8 @@ public class Participant extends Entity<Long>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Participant that = (Participant) o;
-        return Objects.equals(name, that.name);
+        Event event = (Event) o;
+        return Objects.equals(name, event.name);
     }
 
     @Override
@@ -30,17 +38,8 @@ public class Participant extends Entity<Long>{
 
     @Override
     public String toString() {
-        return "Participant{" +
-                super.toString()+
+        return "Event{" + super.toString() +
                 ", name='" + name + '\'' +
                 '}';
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
