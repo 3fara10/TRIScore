@@ -70,7 +70,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\ProiectJava-1.0-SNAPSHOT.jar;%APP_HOME%\lib\jakarta.persistence-api-3.2.0.jar
+set CLASSPATH=%APP_HOME%\lib\ProiectJava-1.0-SNAPSHOT.jar;%APP_HOME%\lib\jakarta.persistence-api-3.2.0.jar;%APP_HOME%\lib\log4j-core-2.23.1.jar;%APP_HOME%\lib\log4j-api-2.23.1.jar;%APP_HOME%\lib\sqlite-jdbc-3.42.0.0.jar
 
 
 @rem Execute ProiectJava
