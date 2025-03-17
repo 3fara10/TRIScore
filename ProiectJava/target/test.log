@@ -1,0 +1,78 @@
+17 Mar 2025 11:21:28,527 INFO  org.example.repository.SQLRepositoryEvent 20 <init> - Initializing SQLRepositoryEvent with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 11:21:28,531 TRACE org.example.repository.SQLRepositoryEvent 69 add - Enter Saving event Event{id=null, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 11:21:28,532 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,532 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 11:21:28,532 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 11:21:28,533 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 11:21:28,534 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 11:21:28,830 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3e62d773)
+17 Mar 2025 11:21:28,849 TRACE org.example.repository.SQLRepositoryEvent 88 add - Exit Saved event with id 5
+17 Mar 2025 11:21:28,851 INFO  org.example.repository.SQLRepositoryReferee 22 <init> - Initializing SQLRepositoryReferee with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 11:21:28,851 INFO  org.example.repository.SQLRepositoryEvent 20 <init> - Initializing SQLRepositoryEvent with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 11:21:28,857 TRACE org.example.repository.SQLRepositoryReferee 93 add - Enter Adding referee Referee{name='Prof. Stanescu', event=Event{id=2, name='Olimpiada Națională de Informatică'}, username='prof_stanescu', password='parola123'}
+17 Mar 2025 11:21:28,857 TRACE org.example.repository.SQLRepositoryEvent 26 findOne - Enter Finding event with id 2
+17 Mar 2025 11:21:28,857 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,859 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 11:21:28,859 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 11:21:28,859 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 11:21:28,859 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 11:21:28,861 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@a1f72f5)
+17 Mar 2025 11:21:28,862 TRACE org.example.repository.SQLRepositoryEvent 34 findOne - Exit Found event: Event{id=2, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 11:21:28,862 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,862 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 11:21:28,862 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 11:21:28,862 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 11:21:28,863 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 11:21:28,863 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75c56eb9)
+17 Mar 2025 11:21:28,866 ERROR org.example.repository.SQLRepositoryReferee 131 add - Error saving referee Referee{name='Prof. Stanescu', event=Event{id=2, name='Olimpiada Națională de Informatică'}, username='prof_stanescu', password='parola123'}: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: referees.username)
+17 Mar 2025 11:21:28,866 TRACE org.example.repository.SQLRepositoryEvent 47 findAll - Enter Finding all events
+17 Mar 2025 11:21:28,867 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,867 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3e62d773)
+17 Mar 2025 11:21:28,868 TRACE org.example.repository.SQLRepositoryEvent 63 findAll - Exit Found 5 events
+17 Mar 2025 11:21:28,868 TRACE org.example.repository.SQLRepositoryReferee 61 findAll - Enter Finding all referees
+17 Mar 2025 11:21:28,868 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,868 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@75c56eb9)
+17 Mar 2025 11:21:28,869 TRACE org.example.repository.SQLRepositoryEvent 26 findOne - Enter Finding event with id 2
+17 Mar 2025 11:21:28,869 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 11:21:28,869 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@a1f72f5)
+17 Mar 2025 11:21:28,869 TRACE org.example.repository.SQLRepositoryEvent 34 findOne - Exit Found event: Event{id=2, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 11:21:28,870 TRACE org.example.repository.SQLRepositoryReferee 87 findAll - Exit Found 1 referees
+17 Mar 2025 15:24:00,217 INFO  org.example.repository.SQLRepositoryEvent 20 <init> - Initializing SQLRepositoryEvent with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 15:24:00,225 TRACE org.example.repository.SQLRepositoryEvent 69 add - Enter Saving event Event{id=null, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 15:24:00,225 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,226 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 15:24:00,228 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 15:24:00,230 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 15:24:00,230 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 15:24:00,525 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ef74c30)
+17 Mar 2025 15:24:00,541 TRACE org.example.repository.SQLRepositoryEvent 88 add - Exit Saved event with id 6
+17 Mar 2025 15:24:00,543 INFO  org.example.repository.SQLRepositoryReferee 22 <init> - Initializing SQLRepositoryReferee with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 15:24:00,544 INFO  org.example.repository.SQLRepositoryEvent 20 <init> - Initializing SQLRepositoryEvent with properties: {jdbc.url=jdbc:sqlite:competition.db}
+17 Mar 2025 15:24:00,550 TRACE org.example.repository.SQLRepositoryReferee 93 add - Enter Adding referee Referee{name='Prof. Stanescu', event=Event{id=2, name='Olimpiada Națională de Informatică'}, username='prof_stanescu', password='parola123'}
+17 Mar 2025 15:24:00,551 TRACE org.example.repository.SQLRepositoryEvent 26 findOne - Enter Finding event with id 2
+17 Mar 2025 15:24:00,553 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,553 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 15:24:00,553 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 15:24:00,553 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 15:24:00,554 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 15:24:00,555 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b2c5e02)
+17 Mar 2025 15:24:00,556 TRACE org.example.repository.SQLRepositoryEvent 34 findOne - Exit Found event: Event{id=2, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 15:24:00,557 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,557 TRACE org.example.utils.JdbcUtils 23 getNewConnection - Enter
+17 Mar 2025 15:24:00,557 INFO  org.example.utils.JdbcUtils 27 getNewConnection - trying to connect to database ... jdbc:sqlite:competition.db
+17 Mar 2025 15:24:00,558 INFO  org.example.utils.JdbcUtils 28 getNewConnection - user: null
+17 Mar 2025 15:24:00,559 INFO  org.example.utils.JdbcUtils 29 getNewConnection - pass: null
+17 Mar 2025 15:24:00,561 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bc222e)
+17 Mar 2025 15:24:00,565 ERROR org.example.repository.SQLRepositoryReferee 131 add - Error saving referee Referee{name='Prof. Stanescu', event=Event{id=2, name='Olimpiada Națională de Informatică'}, username='prof_stanescu', password='parola123'}: org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_UNIQUE] A UNIQUE constraint failed (UNIQUE constraint failed: referees.username)
+17 Mar 2025 15:24:00,566 TRACE org.example.repository.SQLRepositoryEvent 47 findAll - Enter Finding all events
+17 Mar 2025 15:24:00,568 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,568 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ef74c30)
+17 Mar 2025 15:24:00,569 TRACE org.example.repository.SQLRepositoryEvent 63 findAll - Exit Found 6 events
+17 Mar 2025 15:24:00,571 TRACE org.example.repository.SQLRepositoryReferee 61 findAll - Enter Finding all referees
+17 Mar 2025 15:24:00,571 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,572 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4bc222e)
+17 Mar 2025 15:24:00,572 TRACE org.example.repository.SQLRepositoryEvent 26 findOne - Enter Finding event with id 2
+17 Mar 2025 15:24:00,572 TRACE org.example.utils.JdbcUtils 45 getConnection - Enter
+17 Mar 2025 15:24:00,573 TRACE org.example.utils.JdbcUtils 54 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b2c5e02)
+17 Mar 2025 15:24:00,574 TRACE org.example.repository.SQLRepositoryEvent 34 findOne - Exit Found event: Event{id=2, name='Olimpiada Națională de Informatică'}
+17 Mar 2025 15:24:00,574 TRACE org.example.repository.SQLRepositoryReferee 87 findAll - Exit Found 1 referees
