@@ -1,6 +1,8 @@
 package org.example.model;
 
 import java.util.Objects;
+import java.util.UUID;
+
 
 /**
  * Represents a Referee entity in the system.
@@ -8,26 +10,30 @@ import java.util.Objects;
  * It stores referee-specific information such as name, associated event,
  * and authentication credentials.
  */
-public class Referee extends Entity<Long>{
+public class Referee extends Entity<UUID>{
     /**
      * The name of the referee.
      */
     private String name;
+
 
     /**
      * The event that this referee is assigned to.
      */
     private Event event;
 
+
     /**
      * The username for referee authentication.
      */
     private String username;
 
+
     /**
      * The password for referee authentication.
      */
     private String password;
+
 
     /**
      * Default constructor that creates a Referee with null ID.
@@ -40,19 +46,36 @@ public class Referee extends Entity<Long>{
     /**
      * Constructs a new Referee with the specified ID, name, event, username, and password.
      *
+     * @param name The name of the referee
+     * @param event The event that this referee is assigned to
+     * @param username The username for referee authentication
+     * @param password The password for referee authentication
+     */
+    public Referee(String name, Event event, String username, String password) {
+        super(null);
+        this.name = name;
+        this.event = event;
+        this.username = username;
+        this.password = password;
+    }
+
+    /**
+     * Constructs a new Referee with the specified ID, name, event, username, and password.
+     *
      * @param id The unique identifier for this referee
      * @param name The name of the referee
      * @param event The event that this referee is assigned to
      * @param username The username for referee authentication
      * @param password The password for referee authentication
      */
-    public Referee(Long id, String name, Event event, String username, String password) {
+    public Referee(UUID id, String name, Event event, String username, String password) {
         super(id);
         this.name = name;
         this.event = event;
         this.username = username;
         this.password = password;
     }
+
 
     /**
      * Gets the name of the referee.
@@ -63,6 +86,7 @@ public class Referee extends Entity<Long>{
         return name;
     }
 
+
     /**
      * Sets the name of the referee.
      *
@@ -71,6 +95,7 @@ public class Referee extends Entity<Long>{
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * Gets the event that this referee is assigned to.
@@ -81,6 +106,7 @@ public class Referee extends Entity<Long>{
         return event;
     }
 
+
     /**
      * Sets the event for this referee.
      *
@@ -89,6 +115,7 @@ public class Referee extends Entity<Long>{
     public void setEvent(Event event) {
         this.event = event;
     }
+
 
     /**
      * Gets the username for referee authentication.
@@ -99,6 +126,7 @@ public class Referee extends Entity<Long>{
         return username;
     }
 
+
     /**
      * Sets the username for referee authentication.
      *
@@ -107,6 +135,7 @@ public class Referee extends Entity<Long>{
     public void setUsername(String username) {
         this.username = username;
     }
+
 
     /**
      * Gets the password for referee authentication.
@@ -117,6 +146,7 @@ public class Referee extends Entity<Long>{
         return password;
     }
 
+
     /**
      * Sets the password for referee authentication.
      *
@@ -125,6 +155,7 @@ public class Referee extends Entity<Long>{
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     /**
      * Determines whether this referee is equal to another object.
@@ -143,6 +174,7 @@ public class Referee extends Entity<Long>{
         return Objects.equals(name, referee.name) && Objects.equals(event, referee.event) && Objects.equals(username, referee.username) && Objects.equals(password, referee.password);
     }
 
+
     /**
      * Generates a hash code for this referee based on its ID, name, event,
      * username, and password.
@@ -153,6 +185,7 @@ public class Referee extends Entity<Long>{
     public int hashCode() {
         return Objects.hash(super.hashCode(), name, event, username, password);
     }
+
 
     /**
      * Returns a string representation of this referee.

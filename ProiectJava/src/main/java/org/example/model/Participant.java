@@ -1,28 +1,18 @@
 package org.example.model;
 
 import java.util.Objects;
+import java.util.UUID;
 
 /**
  * Represents a Participant entity in the system.
  * This class extends the base Entity class with a Long type identifier.
  * It stores participant-specific information such as name.
  */
-public class Participant extends Entity<Long>{
+public class Participant extends Entity<UUID>{
     /**
      * The name of the participant.
      */
     private String name;
-
-    /**
-     * Constructs a new Participant with the specified ID and name.
-     *
-     * @param id The unique identifier for this participant
-     * @param name The name of the participant
-     */
-    public Participant(Long id, String name) {
-        super(id);
-        this.name = name;
-    }
 
     /**
      * Default constructor that creates a Participant with null ID.
@@ -31,6 +21,33 @@ public class Participant extends Entity<Long>{
     public Participant() {
         super(null);
     }
+
+
+    /**
+     * Constructs a new Participant with the specified ID and name.
+     *
+     * @param id The unique identifier for this participant
+     */
+    public Participant(UUID id){
+        super(id);
+    }
+
+
+
+    /**
+     * Constructs a new Participant with the specified ID and name.
+     *
+     * @param id The unique identifier for this participant
+     * @param name The name of the participant
+     */
+    public Participant(UUID id, String name) {
+        super(id);
+        this.name = name;
+    }
+
+
+
+
 
     /**
      * Determines whether this participant is equal to another object.
@@ -48,6 +65,7 @@ public class Participant extends Entity<Long>{
         return Objects.equals(name, that.name);
     }
 
+
     /**
      * Generates a hash code for this participant based on its ID and name.
      *
@@ -57,6 +75,7 @@ public class Participant extends Entity<Long>{
     public int hashCode() {
         return Objects.hash(super.hashCode(), name);
     }
+
 
     /**
      * Returns a string representation of this participant.
@@ -71,6 +90,7 @@ public class Participant extends Entity<Long>{
                 '}';
     }
 
+
     /**
      * Gets the name of the participant.
      *
@@ -79,6 +99,7 @@ public class Participant extends Entity<Long>{
     public String getName() {
         return name;
     }
+
 
     /**
      * Sets the name of the participant.

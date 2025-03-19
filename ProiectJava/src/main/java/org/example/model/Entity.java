@@ -12,6 +12,7 @@ public abstract class Entity<ID> {
      */
     protected ID id;
 
+
     /**
      * Constructs a new Entity with the specified identifier.
      *
@@ -20,6 +21,7 @@ public abstract class Entity<ID> {
     public Entity(ID id) {
         this.id = id;
     }
+
 
     /**
      * Retrieves the unique identifier of this entity.
@@ -30,6 +32,7 @@ public abstract class Entity<ID> {
         return id;
     }
 
+
     /**
      * Sets the unique identifier for this entity.
      *
@@ -38,6 +41,7 @@ public abstract class Entity<ID> {
     public void setId(ID id) {
         this.id = id;
     }
+
 
     /**
      * Returns a string representation of this entity.
@@ -48,6 +52,7 @@ public abstract class Entity<ID> {
     public String toString() {
         return "id=" + id;
     }
+
 
     /**
      * Determines whether this entity is equal to another object.
@@ -62,6 +67,7 @@ public abstract class Entity<ID> {
         if (!(o instanceof Entity<?> entity)) return false;
         return getId() != null && getId().equals(entity.getId());
     }
+
 
     /**
      * Generates a hash code for this entity based on its ID.

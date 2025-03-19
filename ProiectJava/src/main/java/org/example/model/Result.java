@@ -1,27 +1,33 @@
 package org.example.model;
 
 import java.util.Objects;
+import java.util.UUID;
+
 
 /**
  * Represents a Result entity in the system.
  * This class extends the base Entity class with a Long type identifier.
  * It stores the relationship between an Event, a Participant, and the points scored.
  */
-public class Result extends Entity<Long>{
+public class Result extends Entity<UUID>{
+
     /**
      * The event associated with this result.
      */
     private Event event;
+
 
     /**
      * The participant who achieved this result.
      */
     private Participant participant;
 
+
     /**
      * The number of points scored by the participant in the event.
      */
     private int points;
+
 
     /**
      * Default constructor that creates a Result with null ID.
@@ -31,6 +37,22 @@ public class Result extends Entity<Long>{
         super(null);
     }
 
+
+    /**
+     * Constructs a new Result with the specified ID, event, participant, and points.
+     *
+     * @param event The event associated with this result
+     * @param participant The participant who achieved this result
+     * @param points The number of points scored
+     */
+    public Result(Event event, Participant participant, int points) {
+        super(null);
+        this.event = event;
+        this.participant = participant;
+        this.points = points;
+    }
+
+
     /**
      * Constructs a new Result with the specified ID, event, participant, and points.
      *
@@ -39,12 +61,13 @@ public class Result extends Entity<Long>{
      * @param participant The participant who achieved this result
      * @param points The number of points scored
      */
-    public Result(Long id, Event event, Participant participant, int points) {
+    public Result(UUID id, Event event, Participant participant, int points) {
         super(id);
         this.event = event;
         this.participant = participant;
         this.points = points;
     }
+
 
     /**
      * Gets the event associated with this result.
@@ -55,6 +78,7 @@ public class Result extends Entity<Long>{
         return event;
     }
 
+
     /**
      * Sets the event for this result.
      *
@@ -63,6 +87,7 @@ public class Result extends Entity<Long>{
     public void setEvent(Event event) {
         this.event = event;
     }
+
 
     /**
      * Gets the participant who achieved this result.
@@ -73,6 +98,7 @@ public class Result extends Entity<Long>{
         return participant;
     }
 
+
     /**
      * Sets the participant for this result.
      *
@@ -81,6 +107,7 @@ public class Result extends Entity<Long>{
     public void setParticipant(Participant participant) {
         this.participant = participant;
     }
+
 
     /**
      * Gets the number of points scored.
@@ -91,6 +118,7 @@ public class Result extends Entity<Long>{
         return points;
     }
 
+
     /**
      * Sets the number of points scored.
      *
@@ -99,6 +127,7 @@ public class Result extends Entity<Long>{
     public void setPoints(int points) {
         this.points = points;
     }
+
 
     /**
      * Determines whether this result is equal to another object.
@@ -116,6 +145,7 @@ public class Result extends Entity<Long>{
         return points == result.points && Objects.equals(event, result.event) && Objects.equals(participant, result.participant);
     }
 
+
     /**
      * Generates a hash code for this result based on its ID, event, participant, and points.
      *
@@ -125,6 +155,7 @@ public class Result extends Entity<Long>{
     public int hashCode() {
         return Objects.hash(super.hashCode(), event, participant, points);
     }
+
 
     /**
      * Returns a string representation of this result.
