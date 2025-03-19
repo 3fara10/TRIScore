@@ -4,6 +4,13 @@ import org.example.model.Entity;
 import org.example.exceptions.ValidationException;
 import java.util.Optional;
 
+
+/**
+ * Generic repository interface that defines standard CRUD operations.
+ *
+ * @param <ID> The type of the entity identifier
+ * @param <T> The type of the entity, which must extend Entity<ID>
+ */
 public interface IRepository<ID, T extends Entity<ID>> {
 
     /**
@@ -15,10 +22,12 @@ public interface IRepository<ID, T extends Entity<ID>> {
      */
     Optional<T> findOne(ID id);
 
+
     /**
      * @return all entities
      */
     Iterable<T> findAll();
+
 
     /**
      * saves the given entity in repository
@@ -30,6 +39,7 @@ public interface IRepository<ID, T extends Entity<ID>> {
      */
     Optional<T> add(T entity);
 
+
     /**
      * removes the entity with the specified id
      * @param id - id must not be null
@@ -37,6 +47,7 @@ public interface IRepository<ID, T extends Entity<ID>> {
      * @throws IllegalArgumentException - if the given id is null
      */
     Optional<T> delete(ID id);
+
 
     /**
      *
