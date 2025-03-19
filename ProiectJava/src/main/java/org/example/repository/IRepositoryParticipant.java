@@ -2,11 +2,13 @@ package org.example.repository;
 
 import org.example.model.Participant;
 
+import java.util.UUID;
+
 /**
  * Repository interface for Participant entities.
  * Extends the generic repository interface with Long as the ID type and Event as the entity type.
  * This interface can be extended with Event-specific data access methods as needed.
  */
-public interface IRepositoryParticipant extends IRepository <Long,Participant> {
+public interface IRepositoryParticipant extends IRepository <UUID,Participant> {
     // Specific methods can be added here
 }
