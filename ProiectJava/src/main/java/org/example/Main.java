@@ -25,31 +25,8 @@ public class Main {
 
             IRepositoryEvent repoEvent = new SQLRepositoryEvent(props);
             System.out.println("Adaugam in repository...");
-            //repoEvent.add(new Event(465L, "Popescu Ion"));
-            Event event = new Event();
-
-            event.setName("Olimpiada Națională de Informatică");
+            Event event = new Event("Popescu Ion");
             repoEvent.add(event);
-
-            // Insert a referee
-            event.setId(2L);
-            Referee referee = new Referee();
-            referee.setName("Prof. Stanescu");
-            referee.setUsername("prof_stanescu");
-            referee.setPassword("parola123");
-            referee.setEvent(new Event(event.getId(), event.getName()));
-            IRepositoryReferee repositoryReferee = new SQLRepositoryReferee(props);
-            repositoryReferee.add(referee);
-
-            System.out.println("Afisam datele din repository events...");
-            for(Event e : repoEvent.findAll()){
-                System.out.println(e);
-            }
-
-            System.out.println("Afisam datele din repository referee...");
-            for(Referee e : repositoryReferee.findAll()){
-                System.out.println(e);
-            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);
