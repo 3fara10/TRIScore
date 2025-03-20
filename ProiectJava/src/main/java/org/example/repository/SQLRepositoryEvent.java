@@ -11,7 +11,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.Properties;
@@ -184,8 +183,8 @@ public class SQLRepositoryEvent implements IRepositoryEvent {
                 try (PreparedStatement preStmt = connection.prepareStatement(
                         "UPDATE events SET name = ? WHERE id = ?")) {
 
-                    preStmt.setString(1, event.getName());     // First parameter is name
-                    preStmt.setString(2, event.getId().toString());  // Second parameter is id
+                    preStmt.setString(1, event.getName());
+                    preStmt.setString(2, event.getId().toString());
 
                     int rowsAffected = preStmt.executeUpdate();
                     if (rowsAffected > 0) {
@@ -264,5 +263,6 @@ public class SQLRepositoryEvent implements IRepositoryEvent {
         }
         return event;
     }
+
 }
 

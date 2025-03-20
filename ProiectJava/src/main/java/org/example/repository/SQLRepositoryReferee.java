@@ -2,194 +2,319 @@ package org.example.repository;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.model.Referee;
+import org.example.exceptions.RepositoryException;
+import org.example.exceptions.ValidationException;
 import org.example.model.Event;
+import org.example.model.Referee;
 import org.example.utils.JdbcUtils;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
+import java.util.UUID;
 
 public class SQLRepositoryReferee implements IRepositoryReferee {
 
-    private JdbcUtils dbUtils;
-    private SQLRepositoryEvent eventRepository;
+    private final JdbcUtils dbUtils;
     private static final Logger logger = LogManager.getLogger();
 
     public SQLRepositoryReferee(Properties props) {
         logger.info("Initializing SQLRepositoryReferee with properties: {}", props);
-        dbUtils = new JdbcUtils(props);
-        eventRepository = new SQLRepositoryEvent(props);
+        this.dbUtils = new JdbcUtils(props);
     }
 
     @Override
-    public Optional<Referee> findOne(Long id) {
+    public Optional<Referee> findOne(UUID id) {
         logger.traceEntry("Finding referee with id {}", id);
-        Connection con = dbUtils.getConnection();
-        try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM referees WHERE id = ?")) {
-            preStmt.setLong(1, id);
-            try (ResultSet result = preStmt.executeQuery()) {
-                if (result.next()) {
-                    String name = result.getString("name");
-                    Long eventId = result.getLong("event_id");
-                    String username = result.getString("username");
-                    String password = result.getString("password");
 
-
-                    Optional<Event> eventOpt = eventRepository.findOne(eventId);
-                    if (eventOpt.isEmpty()) {
-                        logger.error("Could not find Event with id {} for Referee {}", eventId, id);
-                        return Optional.empty();
-                    }
-
-                    Referee referee = new Referee(id, name, eventOpt.get(), username, password);
-                    logger.traceExit("Found referee: {}", referee);
-                    return Optional.of(referee);
-                }
+        try {
+            if (id == null) {
+                logger.error("Attempted to find referee with null id");
+                throw new ValidationException("Referee id cannot be null");
             }
-        } catch (SQLException e) {
-            logger.error("Error finding referee with id {}: {}", id, e);
+
+            try (Connection connection = dbUtils.getConnection()) {
+                if (connection == null) {
+                    logger.error("Couldn't connect to the database");
+                    throw new RepositoryException("Couldn't connect to the database.");
+                }
+
+                // Using JOIN to get referee and event data in one query
+                String sql = "SELECT r.id as referee_id, r.name as referee_name, " +
+                        "r.username, r.password, " +
+                        "e.id as event_id, e.name as event_name " +
+                        "FROM referees r " +
+                        "JOIN events e ON r.event_id = e.id " +
+                        "WHERE r.id = ?";
+
+                try (PreparedStatement preStmt = connection.prepareStatement(sql)) {
+                    preStmt.setString(1, id.toString());
+
+                    try (ResultSet result = preStmt.executeQuery()) {
+                        if (result.next()) {
+                            String refereeName = result.getString("referee_name");
+                            String username = result.getString("username");
+                            String password = result.getString("password");
+                            UUID eventId = UUID.fromString(result.getString("event_id"));
+                            String eventName = result.getString("event_name");
+
+                            Event event = new Event(eventId, eventName);
+                            Referee referee = new Referee(id, refereeName, event, username, password);
+
+                            logger.traceExit("Found referee: {}", referee);
+                            return Optional.of(referee);
+                        } else {
+                            logger.traceExit("No referee found with id {}", id);
+                            return Optional.empty();
+                        }
+                    }
+                }
+            } catch (SQLException e) {
+                logger.error("Database error while finding referee: {}", e.getMessage(), e);
+                throw new RepositoryException("Database error: " + e.getMessage(), e);
+            }
+        } catch (ValidationException e) {
+            logger.error("Validation error: {}", e.getMessage(), e);
+            throw new RepositoryException("Validation error: " + e.getMessage(), e);
         }
-        logger.traceExit("No referee found with id {}", id);
-        return Optional.empty();
     }
 
     @Override
     public Iterable<Referee> findAll() {
         logger.traceEntry("Finding all referees");
-        Connection con = dbUtils.getConnection();
-        List<Referee> referees = new ArrayList<>();
-        try (PreparedStatement preStmt = con.prepareStatement("SELECT * FROM referees");
-             ResultSet result = preStmt.executeQuery()) {
 
-            while (result.next()) {
-                Long id = result.getLong("id");
-                String name = result.getString("name");
-                Long eventId = result.getLong("event_id");
-                String username = result.getString("username");
-                String password = result.getString("password");
-
-                // Get the associated Event using EventRepository
-                Optional<Event> eventOpt = eventRepository.findOne(eventId);
-                if (eventOpt.isEmpty()) {
-                    logger.error("Could not find Event with id {} for Referee {}", eventId, id);
-                    continue;
-                }
-
-                Referee referee = new Referee(id, name, eventOpt.get(), username, password);
-                referees.add(referee);
+        try (Connection connection = dbUtils.getConnection()) {
+            if (connection == null) {
+                logger.error("Couldn't connect to the database");
+                throw new RepositoryException("Couldn't connect to the database.");
             }
+
+            // Using JOIN to get all referees with their events
+            String sql = "SELECT r.id as referee_id, r.name as referee_name, " +
+                    "r.username, r.password, " +
+                    "e.id as event_id, e.name as event_name " +
+                    "FROM referees r " +
+                    "JOIN events e ON r.event_id = e.id";
+
+            List<Referee> referees = new ArrayList<>();
+            try (PreparedStatement preStmt = connection.prepareStatement(sql);
+                 ResultSet result = preStmt.executeQuery()) {
+
+                while (result.next()) {
+                    UUID refereeId = UUID.fromString(result.getString("referee_id"));
+                    String refereeName = result.getString("referee_name");
+                    String username = result.getString("username");
+                    String password = result.getString("password");
+                    UUID eventId = UUID.fromString(result.getString("event_id"));
+                    String eventName = result.getString("event_name");
+
+                    Event event = new Event(eventId, eventName);
+                    Referee referee = new Referee(refereeId, refereeName, event, username, password);
+
+                    referees.add(referee);
+                }
+            }
+
+            logger.traceExit("Found {} referees", referees.size());
+            return referees;
         } catch (SQLException e) {
-            logger.error("Error finding all referees: {}", e);
+            logger.error("Database error while finding all referees: {}", e.getMessage(), e);
+            throw new RepositoryException("Database error: " + e.getMessage(), e);
         }
-        logger.traceExit("Found {} referees", referees.size());
-        return referees;
     }
 
     @Override
     public Optional<Referee> add(Referee referee) {
-        logger.traceEntry("Adding referee {}", referee);
-        Event event = referee.getEvent();
-        Optional<Event> eventOpt = eventRepository.findOne(event.getId());
-        if (eventOpt.isEmpty()) {
-            logger.error("Cannot add referee: Event with id {} does not exist", event.getId());
-            return Optional.empty();
-        }
+        logger.traceEntry("Saving referee {}", referee);
 
-        Connection con = dbUtils.getConnection();
-        try (PreparedStatement preStmt = con.prepareStatement(
-                "INSERT INTO referees (name, event_id, username, password) VALUES (?, ?, ?, ?)",
-                Statement.RETURN_GENERATED_KEYS)) {
-
-            preStmt.setString(1, referee.getName());
-            preStmt.setLong(2, event.getId());
-            preStmt.setString(3, referee.getUsername());
-            preStmt.setString(4, referee.getPassword());
-
-            int affectedRows = preStmt.executeUpdate();
-            if (affectedRows == 0) {
-                logger.error("Creating referee failed, no rows affected.");
-                return Optional.empty();
+        try {
+            if (referee == null) {
+                logger.error("Attempted to add null referee");
+                throw new ValidationException("Referee cannot be null");
             }
 
-            try (ResultSet generatedKeys = preStmt.getGeneratedKeys()) {
-                if (generatedKeys.next()) {
-                    Long id = generatedKeys.getLong(1);
-                    // Create a new Referee with the generated id
-                    Referee savedReferee = new Referee(id, referee.getName(), event,
-                            referee.getUsername(), referee.getPassword());
-                    logger.traceExit("Saved referee with id {}", id);
-                    return Optional.of(savedReferee);
-                } else {
-                    logger.error("Creating referee failed, no ID obtained.");
-                    return Optional.empty();
+            if (referee.getEvent() == null || referee.getEvent().getId() == null) {
+                logger.error("Attempted to add referee with null event or event id");
+                throw new ValidationException("Referee must have an event with valid id");
+            }
+
+            try (Connection connection = dbUtils.getConnection()) {
+                if (connection == null) {
+                    logger.error("Couldn't connect to the database");
+                    throw new RepositoryException("Couldn't connect to the database.");
                 }
+
+                // First, check if the event exists
+                String checkSql = "SELECT 1 FROM events WHERE id = ?";
+                try (PreparedStatement checkStmt = connection.prepareStatement(checkSql)) {
+                    checkStmt.setString(1, referee.getEvent().getId().toString());
+                    try (ResultSet checkResult = checkStmt.executeQuery()) {
+                        if (!checkResult.next()) {
+                            logger.error("Cannot add referee with non-existent event {}", referee.getEvent().getId());
+                            throw new ValidationException("Cannot add referee with non-existent event");
+                        }
+                    }
+                }
+
+                // Generate ID if needed
+                if (referee.getId() == null) {
+                    referee.setId(UUID.randomUUID());
+
+                    // Check for collision
+                    String collisionSql = "SELECT 1 FROM referees WHERE id = ?";
+                    try (PreparedStatement collisionStmt = connection.prepareStatement(collisionSql)) {
+                        collisionStmt.setString(1, referee.getId().toString());
+                        try (ResultSet collisionResult = collisionStmt.executeQuery()) {
+                            if (collisionResult.next()) {
+                                logger.warn("UUID collision detected: {}", referee.getId());
+                                referee.setId(UUID.randomUUID());
+                            }
+                        }
+                    }
+                }
+
+                // Insert the referee
+                String insertSql = "INSERT INTO referees (id, name, event_id, username, password) VALUES (?, ?, ?, ?, ?)";
+                try (PreparedStatement insertStmt = connection.prepareStatement(insertSql)) {
+                    insertStmt.setString(1, referee.getId().toString());
+                    insertStmt.setString(2, referee.getName());
+                    insertStmt.setString(3, referee.getEvent().getId().toString());
+                    insertStmt.setString(4, referee.getUsername());
+                    insertStmt.setString(5, referee.getPassword());
+
+                    int rowsAffected = insertStmt.executeUpdate();
+                    if (rowsAffected > 0) {
+                        logger.traceExit("Successfully saved referee with id {}", referee.getId());
+                        return Optional.of(referee);
+                    } else {
+                        logger.error("Failed to insert referee, no rows affected");
+                        return Optional.empty();
+                    }
+                }
+            } catch (SQLException e) {
+                logger.error("Database error while adding referee: {}", e.getMessage(), e);
+                throw new RepositoryException("Database error: " + e.getMessage(), e);
             }
-        } catch (SQLException e) {
-            logger.error("Error saving referee {}: {}", referee, e);
+        } catch (ValidationException e) {
+            logger.error("Validation error: {}", e.getMessage(), e);
+            throw new RepositoryException("Validation error: " + e.getMessage(), e);
         }
-        return Optional.empty();
     }
 
     @Override
     public Optional<Referee> update(Referee referee) {
         logger.traceEntry("Updating referee {}", referee);
 
-        // Ensure Event exists in the database
-        Event event = referee.getEvent();
-        Optional<Event> eventOpt = eventRepository.findOne(event.getId());
-        if (eventOpt.isEmpty()) {
-            logger.error("Cannot update referee: Event with id {} does not exist", event.getId());
-            return Optional.empty();
-        }
-
-        Connection con = dbUtils.getConnection();
-        try (PreparedStatement preStmt = con.prepareStatement(
-                "UPDATE referees SET name = ?, event_id = ?, username = ?, password = ? WHERE id = ?")) {
-
-            preStmt.setString(1, referee.getName());
-            preStmt.setLong(2, event.getId());
-            preStmt.setString(3, referee.getUsername());
-            preStmt.setString(4, referee.getPassword());
-            preStmt.setLong(5, referee.getId());
-
-            int affectedRows = preStmt.executeUpdate();
-            if (affectedRows > 0) {
-                logger.traceExit("Updated referee with id {}", referee.getId());
-                return Optional.of(referee);
+        try {
+            if (referee == null) {
+                logger.error("Attempted to update null referee");
+                throw new ValidationException("Referee cannot be null");
             }
-        } catch (SQLException e) {
-            logger.error("Error updating referee {}: {}", referee, e);
+
+            if (referee.getId() == null) {
+                logger.error("Attempted to update referee with null id");
+                throw new ValidationException("Cannot update referee with null id");
+            }
+
+            if (referee.getEvent() == null || referee.getEvent().getId() == null) {
+                logger.error("Attempted to update referee with null event or event id");
+                throw new ValidationException("Referee must have an event with valid id");
+            }
+
+            try (Connection connection = dbUtils.getConnection()) {
+                if (connection == null) {
+                    logger.error("Couldn't connect to the database");
+                    throw new RepositoryException("Couldn't connect to the database.");
+                }
+
+                // Check if the event exists
+                String checkSql = "SELECT 1 FROM events WHERE id = ?";
+                try (PreparedStatement checkStmt = connection.prepareStatement(checkSql)) {
+                    checkStmt.setString(1, referee.getEvent().getId().toString());
+                    try (ResultSet checkResult = checkStmt.executeQuery()) {
+                        if (!checkResult.next()) {
+                            logger.error("Cannot update referee with non-existent event {}", referee.getEvent().getId());
+                            throw new ValidationException("Cannot update referee with non-existent event");
+                        }
+                    }
+                }
+
+                // Update the referee
+                String updateSql = "UPDATE referees SET name = ?, event_id = ?, username = ?, password = ? WHERE id = ?";
+                try (PreparedStatement updateStmt = connection.prepareStatement(updateSql)) {
+                    updateStmt.setString(1, referee.getName());
+                    updateStmt.setString(2, referee.getEvent().getId().toString());
+                    updateStmt.setString(3, referee.getUsername());
+                    updateStmt.setString(4, referee.getPassword());
+                    updateStmt.setString(5, referee.getId().toString());
+
+                    int rowsAffected = updateStmt.executeUpdate();
+                    if (rowsAffected > 0) {
+                        logger.traceExit("Successfully updated referee with id {}", referee.getId());
+                        return Optional.of(referee);
+                    } else {
+                        logger.error("Failed to update referee with id {}, no rows affected", referee.getId());
+                        return Optional.empty();
+                    }
+                }
+            } catch (SQLException e) {
+                logger.error("Database error while updating referee: {}", e.getMessage(), e);
+                throw new RepositoryException("Database error: " + e.getMessage(), e);
+            }
+        } catch (ValidationException e) {
+            logger.error("Validation error: {}", e.getMessage(), e);
+            throw new RepositoryException("Validation error: " + e.getMessage(), e);
         }
-        logger.traceExit("No referee updated with id {}", referee.getId());
-        return Optional.empty();
     }
 
     @Override
-    public Optional<Referee> delete(Long id) {
+    public Optional<Referee> delete(UUID id) {
         logger.traceEntry("Deleting referee with id {}", id);
-        Optional<Referee> referee = findOne(id);
-        if (referee.isEmpty()) {
-            logger.traceExit("No referee found with id {}, nothing to delete", id);
-            return Optional.empty();
-        }
 
-        Connection con = dbUtils.getConnection();
-        try (PreparedStatement preStmt = con.prepareStatement("DELETE FROM referees WHERE id = ?")) {
-            preStmt.setLong(1, id);
-
-            int affectedRows = preStmt.executeUpdate();
-            if (affectedRows > 0) {
-                logger.traceExit("Deleted referee with id {}", id);
-                return referee;
+        try {
+            if (id == null) {
+                logger.error("Attempted to delete referee with null id");
+                throw new ValidationException("Referee id cannot be null");
             }
-        } catch (SQLException e) {
-            logger.error("Error deleting referee with id {}: {}", id, e);
-        }
-        logger.traceExit("No referee deleted with id {}", id);
-        return Optional.empty();
-    }
 
+            // Find the referee first to return it after deletion
+            Optional<Referee> refereeToDelete = findOne(id);
+            if (refereeToDelete.isEmpty()) {
+                logger.traceExit("No referee found with id {}, nothing to delete", id);
+                return Optional.empty();
+            }
+
+            try (Connection connection = dbUtils.getConnection()) {
+                if (connection == null) {
+                    logger.error("Couldn't connect to the database");
+                    throw new RepositoryException("Couldn't connect to the database.");
+                }
+
+                String deleteSql = "DELETE FROM referees WHERE id = ?";
+                try (PreparedStatement deleteStmt = connection.prepareStatement(deleteSql)) {
+                    deleteStmt.setString(1, id.toString());
+
+                    int rowsAffected = deleteStmt.executeUpdate();
+                    if (rowsAffected > 0) {
+                        logger.traceExit("Successfully deleted referee with id {}", id);
+                        return refereeToDelete;
+                    } else {
+                        logger.warn("Inconsistent state: referee with id {} was found but could not be deleted", id);
+                        return Optional.empty();
+                    }
+                }
+            } catch (SQLException e) {
+                logger.error("Database error while deleting referee: {}", e.getMessage(), e);
+                throw new RepositoryException("Database error: " + e.getMessage(), e);
+            }
+        } catch (ValidationException e) {
+            logger.error("Validation error: {}", e.getMessage(), e);
+            throw new RepositoryException("Validation error: " + e.getMessage(), e);
+        }
+    }
 }
