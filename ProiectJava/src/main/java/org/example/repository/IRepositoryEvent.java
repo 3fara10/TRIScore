@@ -1,8 +1,11 @@
 package org.example.repository;
 
 import org.example.model.Event;
+import org.example.model.Participant;
 
+import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Repository interface for Event entities.

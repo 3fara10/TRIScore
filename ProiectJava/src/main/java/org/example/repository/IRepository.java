@@ -3,7 +3,7 @@ package org.example.repository;
 import org.example.model.Entity;
 import org.example.exceptions.ValidationException;
 import java.util.Optional;
-
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Generic repository interface that defines standard CRUD operations.
@@ -20,14 +20,12 @@ public interface IRepository<ID, T extends Entity<ID>> {
      *         or null if there is no entity with the given id
      * @throws IllegalArgumentException - if id is null
      */
-    Optional<T> findOne(ID id);
-
+    CompletableFuture<Optional<T>> findOneAsync(ID id);
 
     /**
      * @return all entities
      */
-    Iterable<T> findAll();
-
+    CompletableFuture<Iterable<T>> findAllAsync();
 
     /**
      * saves the given entity in repository
@@ -37,8 +35,7 @@ public interface IRepository<ID, T extends Entity<ID>> {
      * @throws ValidationException - if the entity is not valid
      * @throws IllegalArgumentException - if the given entity is null
      */
-    Optional<T> add(T entity);
-
+    CompletableFuture<Optional<T>> addAsync(T entity);
 
     /**
      * removes the entity with the specified id
@@ -46,8 +43,7 @@ public interface IRepository<ID, T extends Entity<ID>> {
      * @return the removed entity or null if there is no entity with the given id
      * @throws IllegalArgumentException - if the given id is null
      */
-    Optional<T> delete(ID id);
-
+    CompletableFuture<Optional<T>> deleteAsync(ID id);
 
     /**
      *
@@ -57,5 +53,5 @@ public interface IRepository<ID, T extends Entity<ID>> {
      * @throws IllegalArgumentException - if the given entity is null
      * @throws ValidationException - if the entity is not valid
      */
-    Optional<T> update(T entity);
+    CompletableFuture<Optional<T>> updateAsync(T entity,T newEntity);
 }
