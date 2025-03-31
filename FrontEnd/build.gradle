@@ -1,0 +1,46 @@
+plugins {
+  id 'java'
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  junitVersion = '5.10.2'
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+application {
+  mainModule = 'org.example.frontend'
+  mainClass = 'org.example.frontend.Main'
+}
+
+javafx {
+  version = '21'
+  modules = ['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+  implementation project(':ProiectJava');
+  implementation('org.controlsfx:controlsfx:11.2.1')
+  implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
+    exclude(group: 'org.openjfx')
+  }
+}
+run {
+  jvmArgs = ['--add-reads', 'ProiectJava=ALL-UNNAMED']
+}
+test {
+useJUnitPlatform()}

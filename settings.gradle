@@ -1,0 +1,3 @@
+rootProject.name = 'mpp-project-java-3fara10'
+include ':FrontEnd'
+include ':ProiectJava'
