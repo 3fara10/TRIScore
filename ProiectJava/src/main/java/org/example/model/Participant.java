@@ -45,8 +45,10 @@ public class Participant extends Entity<UUID>{
         this.name = name;
     }
 
-
-
+    public Participant(String name) {
+        super(null);
+        this.name = name;
+    }
 
 
     /**

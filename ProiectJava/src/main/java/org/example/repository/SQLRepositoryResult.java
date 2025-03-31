@@ -574,7 +574,7 @@ public class SQLRepositoryResult implements IRepositoryResult {
                 if (existingResult.isPresent()) {
                     // 3a. Update existing result
                     Result result = existingResult.get();
-                    Result newResult = new Result(result.getId(), result.getEvent(), result.getParticipant(), points);
+                    Result newResult = new Result(result.getId(), result.getEvent(), result.getParticipant(), result.getPoints()+points);
 
                     updateAsync(result, newResult).join();
                     logger.info("Updated existing result with ID {}", result.getId());

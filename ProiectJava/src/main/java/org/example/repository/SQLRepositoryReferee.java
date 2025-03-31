@@ -151,11 +151,6 @@ public class SQLRepositoryReferee implements IRepositoryReferee {
 
         return CompletableFuture.supplyAsync(() -> {
             try {
-                // 1. Verify the integrity of the parameter
-                if (referee.getEvent() == null || referee.getEvent().getId() == null) {
-                    logger.error("Attempted to add referee with null or invalid event");
-                    throw new ValidationException("Referee must have a valid event with non-empty ID");
-                }
 
                 // 2. Generate ID if needed
                 Referee refereeToSave = referee;
@@ -170,6 +165,19 @@ public class SQLRepositoryReferee implements IRepositoryReferee {
                         throw new RepositoryException("Couldn't connect to the database.");
                     }
 
+                    String eventId = refereeToSave.getEvent().getId().toString();
+                    try (PreparedStatement checkStmt = connection.prepareStatement(
+                            "SELECT COUNT(*) FROM referees WHERE event_id = ?")) {
+
+                        checkStmt.setString(1, eventId);
+
+                        try (ResultSet resultSet = checkStmt.executeQuery()) {
+                            if (resultSet.next() && resultSet.getInt(1) > 0) {
+                                logger.warn("Event with id {} already has a referee assigned", eventId);
+                                throw new ValidationException("This event already has a referee assigned");
+                            }
+                        }
+                    }
                     // 4. Execute insert query
                     try (PreparedStatement preStmt = connection.prepareStatement(
                             "INSERT INTO referees (id, name, event_id, username, password) " +

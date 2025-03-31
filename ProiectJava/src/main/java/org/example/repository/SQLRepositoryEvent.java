@@ -23,7 +23,7 @@ import java.util.concurrent.CompletableFuture;
 public class SQLRepositoryEvent implements IRepositoryEvent {
 
     private final JdbcUtils dbUtils;
-    private static final Logger logger = LogManager.getLogger();
+    private static final Logger logger = LogManager.getLogger(SQLRepositoryEvent.class);
 
 
     public SQLRepositoryEvent(Properties props) {

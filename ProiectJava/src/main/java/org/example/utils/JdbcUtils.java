@@ -8,50 +8,35 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-
 public class JdbcUtils {
     private Properties jdbcProps;
+    private static final Logger logger = LogManager.getLogger();
 
-    private static final Logger logger= LogManager.getLogger();
-
-    public JdbcUtils(Properties props){
-        jdbcProps=props;
+    public JdbcUtils(Properties props) {
+        jdbcProps = props;
     }
 
-    private Connection instance=null;
-    private Connection getNewConnection(){
+    public Connection getConnection() {
         logger.traceEntry();
-        String url=jdbcProps.getProperty("jdbc.url");
-        String user=jdbcProps.getProperty("jdbc.user");
-        String pass=jdbcProps.getProperty("jdbc.pass");
-        logger.info("trying to connect to database ... {}",url);
-        logger.info("user: {}",user);
+        String url = jdbcProps.getProperty("jdbc.url");
+        String user = jdbcProps.getProperty("jdbc.user");
+        String pass = jdbcProps.getProperty("jdbc.pass");
+        logger.info("trying to connect to database ... {}", url);
+        logger.info("user: {}", user);
         logger.info("pass: {}", pass);
-        Connection con=null;
-        try {
 
-            if (user!=null && pass!=null)
-                con= DriverManager.getConnection(url,user,pass);
+        Connection con = null;
+        try {
+            if (user != null && pass != null)
+                con = DriverManager.getConnection(url, user, pass);
             else
-                con=DriverManager.getConnection(url);
-        }catch (SQLException e) {
-            logger.error(e);
-            System.out.println("Error getting connection "+e);
-        }
-        return con;
-    }
-
-    public Connection getConnection(){
-        logger.traceEntry();
-        try {
-            if (instance==null || instance.isClosed())
-                instance=getNewConnection();
-
+                con = DriverManager.getConnection(url);
         } catch (SQLException e) {
-            logger.error(e);
-            System.out.println("Error DB "+e);
+            logger.error("Error getting connection", e);
+            System.out.println("Error getting connection " + e);
         }
-        logger.traceExit(instance);
-        return instance;
+
+        logger.traceExit(con);
+        return con;
     }
 }

@@ -1,10 +1,6 @@
 package org.example.utils;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class ThreadPoolManager {
     private static final ExecutorService REPOSITORY_EXECUTOR = new ThreadPoolExecutor(
@@ -18,7 +14,7 @@ public class ThreadPoolManager {
                 t.setDaemon(true);
                 return t;
             },
-            new ThreadPoolExecutor.CallerRunsPolicy() // politica de respingere
+            new ThreadPoolExecutor.CallerRunsPolicy()
     );
 
     public static Executor getRepositoryExecutor() {
@@ -26,13 +22,19 @@ public class ThreadPoolManager {
     }
 
     public static void shutdownExecutors() {
-        REPOSITORY_EXECUTOR.shutdown();
         try {
-            if (!REPOSITORY_EXECUTOR.awaitTermination(10, TimeUnit.SECONDS)) {
-                REPOSITORY_EXECUTOR.shutdownNow();
+            ForkJoinPool.commonPool().shutdown();
+            if (!ForkJoinPool.commonPool().awaitTermination(5, TimeUnit.SECONDS)) {
+                ForkJoinPool.commonPool().shutdownNow();
+            }
+
+            if (REPOSITORY_EXECUTOR != null && !REPOSITORY_EXECUTOR.isShutdown()) {
+                REPOSITORY_EXECUTOR.shutdown();
+                if (!REPOSITORY_EXECUTOR.awaitTermination(5, TimeUnit.SECONDS)) {
+                    REPOSITORY_EXECUTOR.shutdownNow();
+                }
             }
         } catch (InterruptedException e) {
-            REPOSITORY_EXECUTOR.shutdownNow();
             Thread.currentThread().interrupt();
         }
     }
