@@ -4,104 +4,176 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed2e0183-7a45-438e-bd19-5a098c476b1f" name="Changes" comment="Implemented SQL Repository classes for Java version of the project. Added efficient implementations for Event, Participant, Referee, Result, and DTO repositories.">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__jakarta_persistence_jakarta_persistence_api_3_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_api_2_23_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_logging_log4j_log4j_core_2_23_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_5_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_params_5_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_xerial_sqlite_jdbc_3_42_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ProiectJava.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ProiectJava.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mpp-proiect-java-3fara10.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/RepositoryException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/RepositoryException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/ValidationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/ValidationException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Referee.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Referee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryParticipant.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryParticipant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryReferee.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryReferee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryParticipant.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryParticipant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryReferee.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryReferee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/utils/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/utils/JdbcUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/AlbitruValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/AlbitruValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ParticipantiValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ParticipantiValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ProbaValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ProbaValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/RezultatValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/RezultatValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/Validator.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/Validator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/distributions/ProiectJava-1.0-SNAPSHOT.tar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/distributions/ProiectJava-1.0-SNAPSHOT.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/libs/ProiectJava-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/libs/ProiectJava-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/reports/problems/problems-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/resources/main/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/resources/main/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/scripts/ProiectJava" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/scripts/ProiectJava.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Entity.class.uniqueId14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Event.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/IRepository.class.uniqueId10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/IRepositoryEvent.class.uniqueId11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/IRepositoryParticipant.class.uniqueId12" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/IRepositoryReferee.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/IRepositoryResult.class.uniqueId15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Main.class.uniqueId3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Participant.class.uniqueId6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Referee.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/RepositoryException.class.uniqueId7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/Result.class.uniqueId5" beforeDir="false" />
+    <list default="true" id="ed2e0183-7a45-438e-bd19-5a098c476b1f" name="Changes" comment="Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory.">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/workspace-id.txt.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/8.8/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/classes/java/main/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/classes/java/main/org/example/frontend/LoginFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/classes/java/main/org/example/frontend/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/classes/java/main/org/example/frontend/MainFormController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/distributions/FrontEnd-1.0-SNAPSHOT.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/distributions/FrontEnd-1.0-SNAPSHOT.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/libs/FrontEnd-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/resources/main/org/example/frontend/LoginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/resources/main/org/example/frontend/MainForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/scripts/FrontEnd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/scripts/FrontEnd.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/tmp/compileJava/compileTransaction/stash-dir/LoginFormController.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/tmp/compileJava/compileTransaction/stash-dir/MainFormController.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/competition.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/logs/test.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/org/example/frontend/LoginFormController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/org/example/frontend/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/java/org/example/frontend/MainFormController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/org/example/frontend/LoginForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/main/resources/org/example/frontend/MainForm.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/target/test.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/expanded/expanded.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/8.12/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/RepositoryException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/exceptions/ValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Event.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/ParticipantResultDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Referee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/model/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryParticipant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryReferee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/IRepositoryResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryParticipant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryReferee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/repository/SQLRepositoryResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/AuthentificationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/BcryptPasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IAuthentificationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IParticipantService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IPasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IResultService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/ParticipantService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/ResultService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/service/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/utils/JdbcUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/utils/ThreadPoolManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/AlbitruValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ParticipantiValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/ProbaValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/RezultatValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/classes/java/main/org/example/validators/Validator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/libs/ProiectJava-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/resources/main/bd.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/resources/main/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryDTO.class.uniqueId4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryEvent.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryParticipant.class.uniqueId8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryReferee.class.uniqueId13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryResult.class.uniqueId9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/jar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/competition.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Participant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryReferee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryReferee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/JdbcUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/ThreadPoolManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/ThreadPoolManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectJava/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectJava/target/test.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryParticipant.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryReferee.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/SQLRepositoryResult.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/ThreadPoolManager.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/exceptions/RepositoryException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/exceptions/ValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Participant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/ParticipantResultDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Referee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/model/Result.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepositoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepositoryEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepositoryParticipant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepositoryReferee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/IRepositoryResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryParticipant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryReferee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/AuthentificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/BcryptPasswordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IAuthentificationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IObserver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IParticipantService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IPasswordService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IResultService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/IService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/ParticipantService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/ResultService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/service/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/JdbcUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/utils/ThreadPoolManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/validators/AlbitruValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/validators/ParticipantiValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/validators/ProbaValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/validators/RezultatValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/java/org/example/validators/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/resources/bd.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectJava/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,29 +233,6 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
-                <item name="FrontEnd" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
-                <item name="FrontEnd" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
-                <item name="FrontEnd" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
-                <item name="ProiectJava" type="2d1252cf:ModuleNode" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -195,13 +244,19 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="module-info" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="package-info" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="laborator3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -230,61 +285,76 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.FrontEnd [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Frontend [clean build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [clean build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [jar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ProiectJava.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [:FrontEnd:build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [FrontEnd:run &gt; build_log.txt 2&gt;&amp;1].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [clean build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10 [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.mpp-proiect-java-3fara10.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.ProiectJava-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
-    &quot;JAR Application.gradle-wrapper.jar.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;laborator3&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/FrontEnd/competition.db&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/ProiectJava/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.41609195&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.server.executor": "Run",
+    "Gradle.Build mpp-proiect-java-3fara10.executor": "Run",
+    "Gradle.FrontEnd [run].executor": "Run",
+    "Gradle.Frontend [clean build].executor": "Run",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
+    "Gradle.ProiectJava [:org.example.Main.main()].executor": "Run",
+    "Gradle.ProiectJava [clean build].executor": "Run",
+    "Gradle.ProiectJava [clean].executor": "Run",
+    "Gradle.ProiectJava [jar].executor": "Run",
+    "Gradle.ProiectJava [run].executor": "Run",
+    "Gradle.ProiectJava [test].executor": "Run",
+    "Gradle.ProiectJava.executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [:FrontEnd:build].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [FrontEnd:run > build_log.txt 2>&1].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [build].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [clean build].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10 [run].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10.executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10:clientGTK [:clientGTK:org.example.StartJsonClient.main()].executor": "Run",
+    "Gradle.mpp-proiect-java-3fara10:server [:server:org.example.server.StartJsonServer.main()].executor": "Run",
+    "JAR Application.ProiectJava-1.0-SNAPSHOT.jar.executor": "Run",
+    "JAR Application.gradle-wrapper.jar.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "laborator4",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/server/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/services/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.41609195",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\server\src\main\resources" />
+      <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10" />
+      <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\services\src\main\java" />
+      <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\persistence\src\main\java\org\example" />
+      <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\networking\src\main\java\org\example\networking" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\FrontEnd" />
       <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\ProiectJava\src\main\resources" />
       <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\FrontEnd\src\main\resources" />
       <recent name="C:\Users\anton\IdeaProjects\mpp-proiect-java-3fara10\ProiectJava\logs" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.service" />
+      <recent name="org.example" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -300,7 +370,34 @@
       <command value="gradle ProiectJava:dependencies" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.mpp-proiect-java-3fara10 [run]">
+  <component name="RunManager" selected="Application.client 2">
+    <configuration name="client 1" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StartJsonClient" />
+      <module name="mpp-project-java-3fara10.clientGTK.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="client 2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StartJsonClient" />
+      <module name="mpp-project-java-3fara10.clientGTK.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="server" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="23" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.server.StartJsonServer" />
+      <module name="mpp-project-java-3fara10.server.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mpp-proiect-java-3fara10 [FrontEnd:run &gt; build_log.txt 2&gt;&amp;1]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -375,7 +472,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -427,10 +524,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.server" />
+      <item itemvalue="Application.client 1" />
+      <item itemvalue="Application.client 2" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [build]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [FrontEnd:run &gt; build_log.txt 2&gt;&amp;1]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [run]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [run]" />
         <item itemvalue="Gradle.mpp-proiect-java-3fara10 [build]" />
+        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [run]" />
         <item itemvalue="Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies]" />
         <item itemvalue="Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info]" />
         <item itemvalue="Gradle.mpp-proiect-java-3fara10 [FrontEnd:run &gt; build_log.txt 2&gt;&amp;1]" />
@@ -492,6 +599,25 @@
       <workItem from="1743286840478" duration="4000" />
       <workItem from="1743287225096" duration="1422000" />
       <workItem from="1743370653084" duration="3195000" />
+      <workItem from="1743421618541" duration="901000" />
+      <workItem from="1743433615055" duration="3185000" />
+      <workItem from="1743436839288" duration="58000" />
+      <workItem from="1743542877514" duration="1035000" />
+      <workItem from="1743747610147" duration="595000" />
+      <workItem from="1743750894403" duration="634000" />
+      <workItem from="1743757763009" duration="1050000" />
+      <workItem from="1743769801615" duration="2642000" />
+      <workItem from="1744026867915" duration="1396000" />
+      <workItem from="1744040889341" duration="510000" />
+      <workItem from="1744479386334" duration="6831000" />
+      <workItem from="1744636601140" duration="122000" />
+      <workItem from="1744636818887" duration="2621000" />
+      <workItem from="1746041118687" duration="799000" />
+      <workItem from="1746091596710" duration="7671000" />
+      <workItem from="1746130538124" duration="1275000" />
+      <workItem from="1746187816008" duration="14000" />
+      <workItem from="1746191924385" duration="851000" />
+      <workItem from="1746193805936" duration="2407000" />
     </task>
     <task id="LOCAL-00001" summary="commit initial pentru testarea branch-ului">
       <option name="closed" value="true" />
@@ -653,7 +779,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743265440199</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory.">
+      <option name="closed" value="true" />
+      <created>1743421816796</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743421816796</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory.">
+      <option name="closed" value="true" />
+      <created>1743421898092</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743421898092</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,20 +827,36 @@
     <MESSAGE value="Add SQLRepositoryEvent implementation with UUID support&#10;&#10;Implemented SQLRepositoryEvent,SQLRepositoryReferee, SQLRepositoryParticipant, SQLRepositoryResult class that provides CRUD operations for Event entities with UUID identifiers. The implementation includes:&#10;&#10;- Proper exception handling with ValidationException and RepositoryException&#10;- Resource management using try-with-resources&#10;- UUID collision detection in the generateEvent method&#10;- Comprehensive logging with Log4j&#10;- Connection management through JdbcUtils&#10;- Full CRUD operations: findOne, findAll, add, update, and delete&#10;&#10;All methods validate input parameters and handle database operations safely with proper resource cleanup." />
     <MESSAGE value="Updated main and classes from domain." />
     <MESSAGE value="Implemented SQL Repository classes for Java version of the project. Added efficient implementations for Event, Participant, Referee, Result, and DTO repositories." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented SQL Repository classes for Java version of the project. Added efficient implementations for Event, Participant, Referee, Result, and DTO repositories." />
+    <MESSAGE value="Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryReferee.java</url>
-          <line>161</line>
+          <line>156</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ProiectJava/src/main/java/org/example/repository/SQLRepositoryReferee.java</url>
-          <line>151</line>
+          <url>file://$PROJECT_DIR$/Client/src/main/java/org/example/Main.java</url>
+          <line>13</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ProiectJava/build.gradle</url>
+          <line>9</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/module/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/org/example/server/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
