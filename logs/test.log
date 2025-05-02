@@ -1,0 +1,461 @@
+02 May 2025 17:31:31,320 INFO  org.example.server.StartJsonServer 24 main - Server properties set. {server.port=55556, jdbc.url=jdbc:sqlite:competition.db} 
+02 May 2025 17:31:31,324 INFO  org.example.repository.SQLRepositoryEvent 22 <init> - Initializing SQLRepositoryEvent with properties: {server.port=55556, jdbc.url=jdbc:sqlite:competition.db}
+02 May 2025 17:31:31,325 INFO  org.example.repository.SQLRepositoryParticipant 20 <init> - Initializing SQLRepositoryParticipant with properties: {server.port=55556, jdbc.url=jdbc:sqlite:competition.db}
+02 May 2025 17:31:31,326 INFO  org.example.repository.SQLRepositoryResult 22 <init> - Initializing SQLRepositoryResult with properties: {server.port=55556, jdbc.url=jdbc:sqlite:competition.db}
+02 May 2025 17:31:31,328 INFO  org.example.repository.SQLRepositoryReferee 22 <init> - Initializing SQLRepositoryReferee with properties: {server.port=55556, jdbc.url=jdbc:sqlite:competition.db}
+02 May 2025 17:31:31,329 INFO  org.example.repository.SQLRepositoryDTO 23 <init> - Initializing SQLRepositoryDTO with properties: {server.port=55556, jdbc.url=jdbc:sqlite:competition.db}
+02 May 2025 17:31:31,351 INFO  org.example.server.BcryptPasswordService 18 <init> - Initialized BcryptPasswordService with work factor 12
+02 May 2025 17:31:31,352 INFO  org.example.server.Service 18 <init> - Initializing Service
+02 May 2025 17:31:31,353 INFO  org.example.server.AuthentificationService 23 <init> - Initializing AuthenticationService
+02 May 2025 17:31:31,353 INFO  org.example.server.Service 18 <init> - Initializing Service
+02 May 2025 17:31:31,354 INFO  org.example.server.Service 18 <init> - Initializing Service
+02 May 2025 17:31:31,355 DEBUG org.example.server.StartJsonServer 48 main - Starting server on port: 55556
+02 May 2025 17:31:31,355 DEBUG org.example.networking.utils.AbsConcurrentServer 13 <init> - Concurrent AbstractServer
+02 May 2025 17:31:31,355 DEBUG org.example.networking.utils.JsonConcurrentServer 25 <init> - Creating JsonServer...
+02 May 2025 17:31:31,361 INFO  org.example.networking.utils.AbstractServer 23 start - Waiting for clients ...
+02 May 2025 17:32:00,955 INFO  org.example.StartJsonClient 22 main - Client properties set. 
+02 May 2025 17:32:00,958 INFO  org.example.StartJsonClient 35 main - Using server IP localhost
+02 May 2025 17:32:00,959 INFO  org.example.StartJsonClient 36 main - Using server port 55556
+02 May 2025 17:32:00,993 DEBUG org.example.ClientCtrl 55 <init> - TriathlonClientCtrl initialized
+02 May 2025 17:32:01,137 DEBUG org.example.LoginWindow 41 <init> - Login window initialized
+02 May 2025 17:32:27,185 INFO  org.example.StartJsonClient 22 main - Client properties set. 
+02 May 2025 17:32:27,187 INFO  org.example.StartJsonClient 35 main - Using server IP localhost
+02 May 2025 17:32:27,188 INFO  org.example.StartJsonClient 36 main - Using server port 55556
+02 May 2025 17:32:27,219 DEBUG org.example.ClientCtrl 55 <init> - TriathlonClientCtrl initialized
+02 May 2025 17:32:27,340 DEBUG org.example.LoginWindow 41 <init> - Login window initialized
+02 May 2025 17:33:23,553 INFO  org.example.networking.utils.AbstractServer 25 start - Client connected ...
+02 May 2025 17:33:23,557 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:23,612 INFO  org.example.networking.utils.AbstractServer 23 start - Waiting for clients ...
+02 May 2025 17:33:23,630 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"LOGIN","referee":{"id":"748b3799-d751-4d43-aa7b-303622cf0f5c","name":"","username":"username","password":"X","eventId":"039a4180-f24f-4c96-88d7-f596a3ef1718"}}
+02 May 2025 17:33:23,632 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"LOGIN","referee":{"id":"748b3799-d751-4d43-aa7b-303622cf0f5c","name":"","username":"username","password":"X","eventId":"039a4180-f24f-4c96-88d7-f596a3ef1718"}}
+02 May 2025 17:33:23,640 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=LOGIN, referee=org.example.networking.dto.RefereeDTO@33f6abe0, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:23,640 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 99 handleRequest - Login request...
+02 May 2025 17:33:23,641 INFO  org.example.server.AuthentificationService 33 login - Attempting login for user: username
+02 May 2025 17:33:23,642 TRACE org.example.repository.SQLRepositoryReferee 239 findByUsername - Enter Finding referee with username username
+02 May 2025 17:33:23,643 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:23,643 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:23,643 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:23,644 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:24,025 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@25b3e439)
+02 May 2025 17:33:24,036 TRACE org.example.repository.SQLRepositoryReferee 280 findByUsername - Exit Found referee: Referee{name='Popescu Ion', event=Event{id=e60e5e15-5c79-4faf-a54b-c36df814dd61, name='atletism'}, username='username', password='$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK'}
+02 May 2025 17:33:24,288 DEBUG org.example.server.BcryptPasswordService 56 verifyPassword - Verify password: true
+02 May 2025 17:33:24,289 INFO  org.example.server.AuthentificationService 105 registerObserver - Registering observer for referee ID: {refereeId}
+02 May 2025 17:33:24,289 INFO  org.example.server.Service 27 registerObserver - Observer registered for referee ID f4ae0cf1-7459-4d24-bafa-272eaad8b731
+02 May 2025 17:33:24,289 DEBUG org.example.server.AuthentificationService 111 registerObserver - Observer registered successfully for referee ID: {refereeId}
+02 May 2025 17:33:24,289 INFO  org.example.server.AuthentificationService 69 login - User logged in successfully: username
+02 May 2025 17:33:24,294 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","referee":{"id":"f4ae0cf1-7459-4d24-bafa-272eaad8b731","name":"Popescu Ion","username":"username","password":"$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61","eventName":"atletism"},"totalPoints":0}
+02 May 2025 17:33:24,295 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","referee":{"id":"f4ae0cf1-7459-4d24-bafa-272eaad8b731","name":"Popescu Ion","username":"username","password":"$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61","eventName":"atletism"},"totalPoints":0}
+02 May 2025 17:33:24,300 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=org.example.networking.dto.RefereeDTO@5b051155, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:24,301 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:24,302 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:24,303 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:24,303 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 79 login - Stored current referee: Popescu Ion, Event: atletism
+02 May 2025 17:33:24,303 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:24,303 DEBUG org.example.ClientCtrl 86 login - Login succeeded for referee: Popescu Ion
+02 May 2025 17:33:24,305 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:24,305 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: LOGIN_SUCCESSFUL
+02 May 2025 17:33:24,305 DEBUG org.example.LoginWindow 146 handleLogin - Login successful for: username
+02 May 2025 17:33:24,372 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:25,305 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:25,307 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_ALL_PARTICIPANTS_SORTED, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:25,307 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 170 handleRequest - Get all participants sorted request
+02 May 2025 17:33:25,308 INFO  org.example.server.ParticipantService 22 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name
+02 May 2025 17:33:25,309 DEBUG org.example.repository.SQLRepositoryDTO 29 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name with points directly from database
+02 May 2025 17:33:25,309 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:25,310 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:25,311 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:25,312 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:25,315 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@24c09477)
+02 May 2025 17:33:25,320 DEBUG org.example.repository.SQLRepositoryDTO 65 getAllParticipantsSortedByNameWithTotalPoints - Found 4 participants with points
+02 May 2025 17:33:25,324 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":31},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:25,326 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":31},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:25,328 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=4, totalPoints=0]
+02 May 2025 17:33:25,328 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:25,329 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:25,329 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:25,330 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:25,331 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 172 getAllParticipantsSortedByNameWithTotalPoints - getAllParticipantsSortedByName response: Type=OK, Participants count=0
+02 May 2025 17:33:25,332 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:25,333 DEBUG org.example.ClientCtrl 182 getAllParticipantsSortedByName - Retrieved 4 participants sorted by name
+02 May 2025 17:33:25,334 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 31
+02 May 2025 17:33:25,337 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 16
+02 May 2025 17:33:25,337 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 19
+02 May 2025 17:33:25,339 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:25,339 DEBUG org.example.MainWindow 345 loadParticipants - Loaded 4 participants into the UI
+02 May 2025 17:33:25,340 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61"}
+02 May 2025 17:33:26,330 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61"}
+02 May 2025 17:33:26,333 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=e60e5e15-5c79-4faf-a54b-c36df814dd61, participantId=null]
+02 May 2025 17:33:26,333 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 184 handleRequest - Get participants with results request
+02 May 2025 17:33:26,334 INFO  org.example.server.ParticipantService 34 getParticipantsWithResultsForEvent - Getting participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61
+02 May 2025 17:33:26,335 DEBUG org.example.repository.SQLRepositoryDTO 76 getParticipantsWithResultsForEvent - Getting participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61 directly from database
+02 May 2025 17:33:26,335 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:26,335 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:26,336 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:26,336 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:26,338 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2b91d888)
+02 May 2025 17:33:26,341 DEBUG org.example.repository.SQLRepositoryDTO 120 getParticipantsWithResultsForEvent - Found 3 participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61
+02 May 2025 17:33:26,342 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":12},{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":11}],"totalPoints":0}
+02 May 2025 17:33:26,344 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":12},{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":11}],"totalPoints":0}
+02 May 2025 17:33:26,345 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=3, totalPoints=0]
+02 May 2025 17:33:26,346 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:26,346 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:26,347 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:26,349 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 235 getParticipantsWithResultsForEvent - getParticipantsWithResultsForEvent response: Type=OK, ParticipantResults count=3
+02 May 2025 17:33:26,350 DEBUG org.example.MainWindow 366 loadResults - Got 3 results from service
+02 May 2025 17:33:26,349 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:26,351 DEBUG org.example.MainWindow 369 loadResults - Adding result: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:26,352 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:26,353 DEBUG org.example.MainWindow 369 loadResults - Adding result: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 12
+02 May 2025 17:33:26,353 DEBUG org.example.MainWindow 369 loadResults - Adding result: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 11
+02 May 2025 17:33:26,354 DEBUG org.example.MainWindow 381 loadResults - Loaded 3 results into the UI
+02 May 2025 17:33:26,354 DEBUG org.example.MainWindow 94 <init> - Main window initialized
+02 May 2025 17:33:34,813 INFO  org.example.networking.utils.AbstractServer 25 start - Client connected ...
+02 May 2025 17:33:34,814 INFO  org.example.networking.utils.AbstractServer 23 start - Waiting for clients ...
+02 May 2025 17:33:34,815 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:34,875 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"LOGIN","referee":{"id":"18e957f5-3e37-4e29-94d8-01e15185c2ee","name":"","username":"popescu_maria","password":"1234","eventId":"90cbbcac-e180-416c-9376-863462b55a32"}}
+02 May 2025 17:33:34,876 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"LOGIN","referee":{"id":"18e957f5-3e37-4e29-94d8-01e15185c2ee","name":"","username":"popescu_maria","password":"1234","eventId":"90cbbcac-e180-416c-9376-863462b55a32"}}
+02 May 2025 17:33:34,877 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=LOGIN, referee=org.example.networking.dto.RefereeDTO@65fdcd0e, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:34,878 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 99 handleRequest - Login request...
+02 May 2025 17:33:34,878 INFO  org.example.server.AuthentificationService 33 login - Attempting login for user: popescu_maria
+02 May 2025 17:33:34,879 TRACE org.example.repository.SQLRepositoryReferee 28 findOne - Enter Finding referee with id f4ae0cf1-7459-4d24-bafa-272eaad8b731
+02 May 2025 17:33:34,879 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:34,879 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:34,879 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:34,879 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:34,880 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b3a3fc1)
+02 May 2025 17:33:34,880 TRACE org.example.repository.SQLRepositoryReferee 60 findOne - Exit Found referee: Referee{name='Popescu Ion', event=Event{id=e60e5e15-5c79-4faf-a54b-c36df814dd61, name='atletism'}, username='username', password='$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK'}
+02 May 2025 17:33:34,881 TRACE org.example.repository.SQLRepositoryReferee 239 findByUsername - Enter Finding referee with username popescu_maria
+02 May 2025 17:33:34,881 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:34,881 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:34,881 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:34,881 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:34,881 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6f05a67e)
+02 May 2025 17:33:34,883 TRACE org.example.repository.SQLRepositoryReferee 280 findByUsername - Exit Found referee: Referee{name='Popescu Maria', event=Event{id=668c4dae-3cc8-4922-8deb-2a201d022246, name='ciclism'}, username='popescu_maria', password='$2a$12$r0DpPbWtBRyyjVLgjUGUl.V5MZQvDvq57CRPwPkN3lDmbK4pWy8AG'}
+02 May 2025 17:33:35,137 DEBUG org.example.server.BcryptPasswordService 56 verifyPassword - Verify password: true
+02 May 2025 17:33:35,143 INFO  org.example.server.AuthentificationService 105 registerObserver - Registering observer for referee ID: {refereeId}
+02 May 2025 17:33:35,143 INFO  org.example.server.Service 27 registerObserver - Observer registered for referee ID fb7f4ab5-8ff3-4e23-9243-50346141a02e
+02 May 2025 17:33:35,145 DEBUG org.example.server.AuthentificationService 111 registerObserver - Observer registered successfully for referee ID: {refereeId}
+02 May 2025 17:33:35,151 INFO  org.example.server.AuthentificationService 69 login - User logged in successfully: popescu_maria
+02 May 2025 17:33:35,152 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","referee":{"id":"fb7f4ab5-8ff3-4e23-9243-50346141a02e","name":"Popescu Maria","username":"popescu_maria","password":"$2a$12$r0DpPbWtBRyyjVLgjUGUl.V5MZQvDvq57CRPwPkN3lDmbK4pWy8AG","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism"},"totalPoints":0}
+02 May 2025 17:33:35,153 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","referee":{"id":"fb7f4ab5-8ff3-4e23-9243-50346141a02e","name":"Popescu Maria","username":"popescu_maria","password":"$2a$12$r0DpPbWtBRyyjVLgjUGUl.V5MZQvDvq57CRPwPkN3lDmbK4pWy8AG","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism"},"totalPoints":0}
+02 May 2025 17:33:35,159 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=org.example.networking.dto.RefereeDTO@531111f5, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:35,161 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:35,163 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:35,164 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:35,164 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:35,164 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 79 login - Stored current referee: Popescu Maria, Event: ciclism
+02 May 2025 17:33:35,164 DEBUG org.example.ClientCtrl 86 login - Login succeeded for referee: Popescu Maria
+02 May 2025 17:33:35,165 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:35,166 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: LOGIN_SUCCESSFUL
+02 May 2025 17:33:35,166 DEBUG org.example.LoginWindow 146 handleLogin - Login successful for: popescu_maria
+02 May 2025 17:33:35,211 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:36,163 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:36,165 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_ALL_PARTICIPANTS_SORTED, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:36,167 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 170 handleRequest - Get all participants sorted request
+02 May 2025 17:33:36,168 INFO  org.example.server.ParticipantService 22 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name
+02 May 2025 17:33:36,169 DEBUG org.example.repository.SQLRepositoryDTO 29 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name with points directly from database
+02 May 2025 17:33:36,169 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:36,170 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:36,170 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:36,171 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:36,172 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2a0735fa)
+02 May 2025 17:33:36,173 DEBUG org.example.repository.SQLRepositoryDTO 65 getAllParticipantsSortedByNameWithTotalPoints - Found 4 participants with points
+02 May 2025 17:33:36,174 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":31},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:36,175 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":31},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:36,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=4, totalPoints=0]
+02 May 2025 17:33:36,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:36,178 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:36,178 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:36,179 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:36,179 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:36,180 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 172 getAllParticipantsSortedByNameWithTotalPoints - getAllParticipantsSortedByName response: Type=OK, Participants count=0
+02 May 2025 17:33:36,181 DEBUG org.example.ClientCtrl 182 getAllParticipantsSortedByName - Retrieved 4 participants sorted by name
+02 May 2025 17:33:36,182 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 31
+02 May 2025 17:33:36,182 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 16
+02 May 2025 17:33:36,182 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 19
+02 May 2025 17:33:36,183 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:36,183 DEBUG org.example.MainWindow 345 loadParticipants - Loaded 4 participants into the UI
+02 May 2025 17:33:36,184 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:37,188 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:37,189 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=668c4dae-3cc8-4922-8deb-2a201d022246, participantId=null]
+02 May 2025 17:33:37,193 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 184 handleRequest - Get participants with results request
+02 May 2025 17:33:37,193 INFO  org.example.server.ParticipantService 34 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:37,193 DEBUG org.example.repository.SQLRepositoryDTO 76 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246 directly from database
+02 May 2025 17:33:37,194 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:37,194 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:37,195 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:37,195 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:37,197 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@21190809)
+02 May 2025 17:33:37,201 DEBUG org.example.repository.SQLRepositoryDTO 120 getParticipantsWithResultsForEvent - Found 3 participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:37,203 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":7},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:37,203 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":7},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:37,203 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=3, totalPoints=0]
+02 May 2025 17:33:37,205 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:37,205 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:37,205 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:37,205 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:37,206 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 235 getParticipantsWithResultsForEvent - getParticipantsWithResultsForEvent response: Type=OK, ParticipantResults count=3
+02 May 2025 17:33:37,206 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:37,206 DEBUG org.example.MainWindow 366 loadResults - Got 3 results from service
+02 May 2025 17:33:37,207 DEBUG org.example.MainWindow 369 loadResults - Adding result: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 7
+02 May 2025 17:33:37,207 DEBUG org.example.MainWindow 369 loadResults - Adding result: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 7
+02 May 2025 17:33:37,207 DEBUG org.example.MainWindow 369 loadResults - Adding result: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 2
+02 May 2025 17:33:37,207 DEBUG org.example.MainWindow 381 loadResults - Loaded 3 results into the UI
+02 May 2025 17:33:37,209 DEBUG org.example.MainWindow 94 <init> - Main window initialized
+02 May 2025 17:33:40,031 DEBUG org.example.ClientCtrl 148 lambda$addResultAsync$0 - Adding result on background thread for participant 0110ba00-8333-4d1b-bfb9-b5201ea30cbb in event 668c4dae-3cc8-4922-8deb-2a201d022246 with points 1
+02 May 2025 17:33:40,033 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"ADD_RESULT","result":{"id":"15dd99d0-c3dc-4a23-84d9-36bf584a411c","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","points":1}}
+02 May 2025 17:33:40,035 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"ADD_RESULT","result":{"id":"15dd99d0-c3dc-4a23-84d9-36bf584a411c","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","points":1}}
+02 May 2025 17:33:40,037 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=ADD_RESULT, referee=null, participant=null, result=org.example.networking.dto.ResultDTO@1be7ffdc, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:40,037 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 151 handleRequest - Add result request
+02 May 2025 17:33:40,044 INFO  org.example.server.ResultService 24 addResult - Adding result: Participant ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Event ID: 668c4dae-3cc8-4922-8deb-2a201d022246, Points: 1
+02 May 2025 17:33:40,045 TRACE org.example.repository.SQLRepositoryResult 318 addOrUpdateResult - Enter Adding or updating result for Participant ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Event ID: 668c4dae-3cc8-4922-8deb-2a201d022246, Points: 1
+02 May 2025 17:33:40,045 TRACE org.example.repository.SQLRepositoryResult 254 findByEventAndParticipant - Enter Finding result for event 668c4dae-3cc8-4922-8deb-2a201d022246 and participant 0110ba00-8333-4d1b-bfb9-b5201ea30cbb
+02 May 2025 17:33:40,045 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:40,045 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:40,045 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:40,046 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:40,047 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4f27d32e)
+02 May 2025 17:33:40,058 TRACE org.example.repository.SQLRepositoryResult 298 findByEventAndParticipant - Exit Found result: Result{id=bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4, event=Event{id=668c4dae-3cc8-4922-8deb-2a201d022246, name='ciclism'}, participant=Participant{id=0110ba00-8333-4d1b-bfb9-b5201ea30cbb, name='Ana Maria'}, points=7}
+02 May 2025 17:33:40,059 TRACE org.example.repository.SQLRepositoryResult 189 update - Enter Updating result Result{id=bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4, event=Event{id=668c4dae-3cc8-4922-8deb-2a201d022246, name='ciclism'}, participant=Participant{id=0110ba00-8333-4d1b-bfb9-b5201ea30cbb, name='Ana Maria'}, points=7}
+02 May 2025 17:33:40,059 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:40,060 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:40,060 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:40,060 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:40,061 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4c73688b)
+02 May 2025 17:33:40,072 TRACE org.example.repository.SQLRepositoryResult 229 update - Exit Successfully updated result with id bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4
+02 May 2025 17:33:40,073 INFO  org.example.repository.SQLRepositoryResult 344 addOrUpdateResult - Updated existing result with ID bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4
+02 May 2025 17:33:40,073 DEBUG org.example.server.Service 37 notifyObservers - Notifying 2 observers
+02 May 2025 17:33:40,077 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"RESULT_ADDED","result":{"id":"bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism","participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},"totalPoints":0}
+02 May 2025 17:33:40,078 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"UPDATE","totalPoints":0}
+02 May 2025 17:33:40,078 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"UPDATE","totalPoints":0}
+02 May 2025 17:33:40,079 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"RESULT_ADDED","result":{"id":"bb5e2db5-f03e-4015-9cbe-c1f990fb7dd4","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism","participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},"totalPoints":0}
+02 May 2025 17:33:40,079 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=RESULT_ADDED, error=null, referee=null, result=org.example.networking.dto.ResultDTO@61e5da5f, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 251 update - Sent update notification to client
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"UPDATE","totalPoints":0}
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 251 update - Sent update notification to client
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:40,080 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=UPDATE, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:40,081 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:40,081 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 499 run - Processing as update notification
+02 May 2025 17:33:40,081 DEBUG org.example.ClientCtrl 155 lambda$addResultAsync$0 - Result added for participant 0110ba00-8333-4d1b-bfb9-b5201ea30cbb with points 1
+02 May 2025 17:33:40,081 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:40,081 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 314 handleUpdate - handleUpdate called with Response[type=UPDATE, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:40,081 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 326 handleUpdate - Processing update notification of type: UPDATE
+02 May 2025 17:33:40,082 DEBUG org.example.ClientCtrl 223 update - Received update from service
+02 May 2025 17:33:40,082 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"UPDATE","totalPoints":0}
+02 May 2025 17:33:40,082 DEBUG org.example.MainWindow 485 onClientUpdate - Received update event: EVENT_STATUS_CHANGED
+02 May 2025 17:33:40,082 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=UPDATE, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:40,083 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 499 run - Processing as update notification
+02 May 2025 17:33:40,083 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: EVENT_STATUS_CHANGED
+02 May 2025 17:33:40,083 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:40,083 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 314 handleUpdate - handleUpdate called with Response[type=UPDATE, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:40,083 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 326 handleUpdate - Processing update notification of type: UPDATE
+02 May 2025 17:33:40,084 DEBUG org.example.ClientCtrl 223 update - Received update from service
+02 May 2025 17:33:40,084 DEBUG org.example.MainWindow 485 onClientUpdate - Received update event: EVENT_STATUS_CHANGED
+02 May 2025 17:33:40,084 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: EVENT_STATUS_CHANGED
+02 May 2025 17:33:40,085 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:40,086 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:40,086 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:40,086 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:40,087 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_ALL_PARTICIPANTS_SORTED, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:40,087 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 170 handleRequest - Get all participants sorted request
+02 May 2025 17:33:40,087 INFO  org.example.server.ParticipantService 22 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name
+02 May 2025 17:33:40,087 DEBUG org.example.repository.SQLRepositoryDTO 29 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name with points directly from database
+02 May 2025 17:33:40,087 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:40,087 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:40,087 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:40,087 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:40,088 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@bca0c41)
+02 May 2025 17:33:40,090 DEBUG org.example.repository.SQLRepositoryDTO 65 getAllParticipantsSortedByNameWithTotalPoints - Found 4 participants with points
+02 May 2025 17:33:40,090 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:40,091 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:40,091 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=4, totalPoints=0]
+02 May 2025 17:33:40,092 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:40,092 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:40,092 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:40,093 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:40,093 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 172 getAllParticipantsSortedByNameWithTotalPoints - getAllParticipantsSortedByName response: Type=OK, Participants count=0
+02 May 2025 17:33:40,093 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:40,093 DEBUG org.example.ClientCtrl 182 getAllParticipantsSortedByName - Retrieved 4 participants sorted by name
+02 May 2025 17:33:40,093 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 32
+02 May 2025 17:33:40,094 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 16
+02 May 2025 17:33:40,094 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 19
+02 May 2025 17:33:40,094 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:40,094 DEBUG org.example.MainWindow 345 loadParticipants - Loaded 4 participants into the UI
+02 May 2025 17:33:40,095 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61"}
+02 May 2025 17:33:41,092 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61"}
+02 May 2025 17:33:41,093 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=e60e5e15-5c79-4faf-a54b-c36df814dd61, participantId=null]
+02 May 2025 17:33:41,096 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 184 handleRequest - Get participants with results request
+02 May 2025 17:33:41,098 INFO  org.example.server.ParticipantService 34 getParticipantsWithResultsForEvent - Getting participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61
+02 May 2025 17:33:41,098 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:41,099 DEBUG org.example.repository.SQLRepositoryDTO 76 getParticipantsWithResultsForEvent - Getting participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61 directly from database
+02 May 2025 17:33:41,101 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_ALL_PARTICIPANTS_SORTED, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:41,102 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 170 handleRequest - Get all participants sorted request
+02 May 2025 17:33:41,102 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:41,103 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:41,103 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:41,104 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:41,105 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5957f9bd)
+02 May 2025 17:33:41,107 DEBUG org.example.repository.SQLRepositoryDTO 120 getParticipantsWithResultsForEvent - Found 3 participants with results for event ID: e60e5e15-5c79-4faf-a54b-c36df814dd61
+02 May 2025 17:33:41,112 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":12},{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":11}],"totalPoints":0}
+02 May 2025 17:33:41,112 INFO  org.example.server.ParticipantService 22 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name
+02 May 2025 17:33:41,112 DEBUG org.example.repository.SQLRepositoryDTO 29 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name with points directly from database
+02 May 2025 17:33:41,113 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:41,113 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:41,113 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":12},{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":11}],"totalPoints":0}
+02 May 2025 17:33:41,113 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:41,114 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=3, totalPoints=0]
+02 May 2025 17:33:41,114 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:41,115 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:41,115 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:41,115 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:41,115 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:41,113 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:41,116 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 235 getParticipantsWithResultsForEvent - getParticipantsWithResultsForEvent response: Type=OK, ParticipantResults count=3
+02 May 2025 17:33:41,117 DEBUG org.example.MainWindow 366 loadResults - Got 3 results from service
+02 May 2025 17:33:41,117 DEBUG org.example.MainWindow 369 loadResults - Adding result: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:41,118 DEBUG org.example.MainWindow 369 loadResults - Adding result: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 12
+02 May 2025 17:33:41,118 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@21da6618)
+02 May 2025 17:33:41,119 DEBUG org.example.repository.SQLRepositoryDTO 65 getAllParticipantsSortedByNameWithTotalPoints - Found 4 participants with points
+02 May 2025 17:33:41,119 DEBUG org.example.MainWindow 369 loadResults - Adding result: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 11
+02 May 2025 17:33:41,119 DEBUG org.example.MainWindow 381 loadResults - Loaded 3 results into the UI
+02 May 2025 17:33:41,121 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:41,122 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=4, totalPoints=0]
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:41,123 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:41,124 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 172 getAllParticipantsSortedByNameWithTotalPoints - getAllParticipantsSortedByName response: Type=OK, Participants count=0
+02 May 2025 17:33:41,124 DEBUG org.example.ClientCtrl 182 getAllParticipantsSortedByName - Retrieved 4 participants sorted by name
+02 May 2025 17:33:41,125 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 32
+02 May 2025 17:33:41,130 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 16
+02 May 2025 17:33:41,131 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 19
+02 May 2025 17:33:41,131 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:41,131 DEBUG org.example.MainWindow 345 loadParticipants - Loaded 4 participants into the UI
+02 May 2025 17:33:41,137 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:42,130 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:42,131 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=668c4dae-3cc8-4922-8deb-2a201d022246, participantId=null]
+02 May 2025 17:33:42,131 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 184 handleRequest - Get participants with results request
+02 May 2025 17:33:42,132 INFO  org.example.server.ParticipantService 34 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:42,132 DEBUG org.example.repository.SQLRepositoryDTO 76 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246 directly from database
+02 May 2025 17:33:42,132 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:42,133 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:42,133 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:42,141 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:42,143 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4a0d8f99)
+02 May 2025 17:33:42,145 DEBUG org.example.repository.SQLRepositoryDTO 120 getParticipantsWithResultsForEvent - Found 3 participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:42,146 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:42,147 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:42,148 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=3, totalPoints=0]
+02 May 2025 17:33:42,150 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:42,150 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:42,151 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:42,151 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:42,151 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:42,152 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 235 getParticipantsWithResultsForEvent - getParticipantsWithResultsForEvent response: Type=OK, ParticipantResults count=3
+02 May 2025 17:33:42,153 DEBUG org.example.MainWindow 366 loadResults - Got 3 results from service
+02 May 2025 17:33:42,153 DEBUG org.example.MainWindow 369 loadResults - Adding result: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 8
+02 May 2025 17:33:42,153 DEBUG org.example.MainWindow 369 loadResults - Adding result: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 7
+02 May 2025 17:33:42,153 DEBUG org.example.MainWindow 369 loadResults - Adding result: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 2
+02 May 2025 17:33:42,153 DEBUG org.example.MainWindow 381 loadResults - Loaded 3 results into the UI
+02 May 2025 17:33:42,162 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:43,159 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_ALL_PARTICIPANTS_SORTED"}
+02 May 2025 17:33:43,159 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_ALL_PARTICIPANTS_SORTED, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:43,159 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 170 handleRequest - Get all participants sorted request
+02 May 2025 17:33:43,159 INFO  org.example.server.ParticipantService 22 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name
+02 May 2025 17:33:43,159 DEBUG org.example.repository.SQLRepositoryDTO 29 getAllParticipantsSortedByNameWithTotalPoints - Getting all participants sorted by name with points directly from database
+02 May 2025 17:33:43,159 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:43,159 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:43,160 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:43,160 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:43,160 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4b8f7dab)
+02 May 2025 17:33:43,161 DEBUG org.example.repository.SQLRepositoryDTO 65 getAllParticipantsSortedByNameWithTotalPoints - Found 4 participants with points
+02 May 2025 17:33:43,161 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:43,162 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":32},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":16},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":19},{"participantId":"0737df5e-61e2-406c-8003-14877231331d","participantName":"Vasile George","points":16}],"totalPoints":0}
+02 May 2025 17:33:43,162 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=4, totalPoints=0]
+02 May 2025 17:33:43,162 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:43,163 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:43,163 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:43,163 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:43,163 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:43,167 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 172 getAllParticipantsSortedByNameWithTotalPoints - getAllParticipantsSortedByName response: Type=OK, Participants count=0
+02 May 2025 17:33:43,167 DEBUG org.example.ClientCtrl 182 getAllParticipantsSortedByName - Retrieved 4 participants sorted by name
+02 May 2025 17:33:43,167 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 32
+02 May 2025 17:33:43,167 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 16
+02 May 2025 17:33:43,167 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 19
+02 May 2025 17:33:43,168 DEBUG org.example.MainWindow 333 loadParticipants - Adding participant: Vasile George, ID: 0737df5e-61e2-406c-8003-14877231331d, Points: 16
+02 May 2025 17:33:43,168 DEBUG org.example.MainWindow 345 loadParticipants - Loaded 4 participants into the UI
+02 May 2025 17:33:43,169 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:44,165 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246"}
+02 May 2025 17:33:44,167 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=GET_PARTICIPANTS_WITH_RESULTS_FOR_EVENT, referee=null, participant=null, result=null, participantResult=null, refereeId=null, eventId=668c4dae-3cc8-4922-8deb-2a201d022246, participantId=null]
+02 May 2025 17:33:44,167 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 184 handleRequest - Get participants with results request
+02 May 2025 17:33:44,168 INFO  org.example.server.ParticipantService 34 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:44,168 DEBUG org.example.repository.SQLRepositoryDTO 76 getParticipantsWithResultsForEvent - Getting participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246 directly from database
+02 May 2025 17:33:44,170 TRACE org.example.utils.JdbcUtils 20 getConnection - Enter
+02 May 2025 17:33:44,170 INFO  org.example.utils.JdbcUtils 24 getConnection - trying to connect to database ... jdbc:sqlite:competition.db
+02 May 2025 17:33:44,170 INFO  org.example.utils.JdbcUtils 25 getConnection - user: null
+02 May 2025 17:33:44,170 INFO  org.example.utils.JdbcUtils 26 getConnection - pass: null
+02 May 2025 17:33:44,172 TRACE org.example.utils.JdbcUtils 39 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@289ad30f)
+02 May 2025 17:33:44,173 DEBUG org.example.repository.SQLRepositoryDTO 120 getParticipantsWithResultsForEvent - Found 3 participants with results for event ID: 668c4dae-3cc8-4922-8deb-2a201d022246
+02 May 2025 17:33:44,174 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:44,175 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","participantResults":[{"participantId":"0110ba00-8333-4d1b-bfb9-b5201ea30cbb","participantName":"Ana Maria","points":8},{"participantId":"11f36e1a-dcaf-4820-b857-10849064d4e6","participantName":"Mihai Popescu","points":7},{"participantId":"3ade15eb-6443-49ec-8941-de5ca0a6ff41","participantName":"Cosmin Andrei","points":2}],"totalPoints":0}
+02 May 2025 17:33:44,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=3, totalPoints=0]
+02 May 2025 17:33:44,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:44,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:44,177 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:44,183 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:44,182 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 235 getParticipantsWithResultsForEvent - getParticipantsWithResultsForEvent response: Type=OK, ParticipantResults count=3
+02 May 2025 17:33:44,183 DEBUG org.example.MainWindow 366 loadResults - Got 3 results from service
+02 May 2025 17:33:44,184 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:44,184 DEBUG org.example.MainWindow 369 loadResults - Adding result: Ana Maria, ID: 0110ba00-8333-4d1b-bfb9-b5201ea30cbb, Points: 8
+02 May 2025 17:33:44,184 DEBUG org.example.MainWindow 369 loadResults - Adding result: Mihai Popescu, ID: 11f36e1a-dcaf-4820-b857-10849064d4e6, Points: 7
+02 May 2025 17:33:44,184 DEBUG org.example.MainWindow 369 loadResults - Adding result: Cosmin Andrei, ID: 3ade15eb-6443-49ec-8941-de5ca0a6ff41, Points: 2
+02 May 2025 17:33:44,184 DEBUG org.example.MainWindow 381 loadResults - Loaded 3 results into the UI
+02 May 2025 17:33:44,197 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"LOGOUT","referee":{"id":"fb7f4ab5-8ff3-4e23-9243-50346141a02e","name":"Popescu Maria","username":"popescu_maria","password":"$2a$12$r0DpPbWtBRyyjVLgjUGUl.V5MZQvDvq57CRPwPkN3lDmbK4pWy8AG","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism"}}
+02 May 2025 17:33:45,185 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"LOGOUT","referee":{"id":"fb7f4ab5-8ff3-4e23-9243-50346141a02e","name":"Popescu Maria","username":"popescu_maria","password":"$2a$12$r0DpPbWtBRyyjVLgjUGUl.V5MZQvDvq57CRPwPkN3lDmbK4pWy8AG","eventId":"668c4dae-3cc8-4922-8deb-2a201d022246","eventName":"ciclism"}}
+02 May 2025 17:33:45,188 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=LOGOUT, referee=org.example.networking.dto.RefereeDTO@5a828aa2, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:45,188 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 115 handleRequest - Logout request
+02 May 2025 17:33:45,188 INFO  org.example.server.AuthentificationService 78 logout - Logging out referee ID: fb7f4ab5-8ff3-4e23-9243-50346141a02e
+02 May 2025 17:33:45,188 INFO  org.example.server.AuthentificationService 118 unregisterObserver - Unregistering observer for referee ID: {refereeId}
+02 May 2025 17:33:45,190 INFO  org.example.server.Service 33 unregisterObserver - Observer unregistered for referee ID fb7f4ab5-8ff3-4e23-9243-50346141a02e
+02 May 2025 17:33:45,190 DEBUG org.example.server.AuthentificationService 120 unregisterObserver - Observer unregistered successfully for referee ID: {refereeId}
+02 May 2025 17:33:45,190 INFO  org.example.server.AuthentificationService 81 logout - Referee ID fb7f4ab5-8ff3-4e23-9243-50346141a02e logged out successfully
+02 May 2025 17:33:45,193 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","totalPoints":0}
+02 May 2025 17:33:45,194 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","totalPoints":0}
+02 May 2025 17:33:45,194 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:45,195 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:45,195 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:45,195 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:45,195 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:45,195 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 487 run - Waiting for response from server...
+02 May 2025 17:33:46,203 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 490 run - Received empty response, continuing...
+02 May 2025 17:33:46,204 DEBUG org.example.ClientCtrl 107 logout - Logout successful
+02 May 2025 17:33:46,205 DEBUG org.example.MainWindow 485 onClientUpdate - Received update event: LOGOUT_SUCCESSFUL
+02 May 2025 17:33:46,206 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: LOGOUT_SUCCESSFUL
+02 May 2025 17:33:46,212 DEBUG org.example.LoginWindow 41 <init> - Login window initialized
+02 May 2025 17:33:47,794 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 464 sendRequest - Sending request {"type":"LOGOUT","referee":{"id":"f4ae0cf1-7459-4d24-bafa-272eaad8b731","name":"Popescu Ion","username":"username","password":"$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61","eventName":"atletism"}}
+02 May 2025 17:33:47,795 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 61 run - Received json request {"type":"LOGOUT","referee":{"id":"f4ae0cf1-7459-4d24-bafa-272eaad8b731","name":"Popescu Ion","username":"username","password":"$2a$12$CVFVocRWETgUrP8ZpCgWsOJf23xYkQV9/qhs4PsTYaNlSQTXS.0EK","eventId":"e60e5e15-5c79-4faf-a54b-c36df814dd61","eventName":"atletism"}}
+02 May 2025 17:33:47,795 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 63 run - Deserialized Request Request[type=LOGOUT, referee=org.example.networking.dto.RefereeDTO@7ca72f87, participant=null, result=null, participantResult=null, refereeId=null, eventId=null, participantId=null]
+02 May 2025 17:33:47,796 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 115 handleRequest - Logout request
+02 May 2025 17:33:47,796 INFO  org.example.server.AuthentificationService 78 logout - Logging out referee ID: f4ae0cf1-7459-4d24-bafa-272eaad8b731
+02 May 2025 17:33:47,796 INFO  org.example.server.AuthentificationService 118 unregisterObserver - Unregistering observer for referee ID: {refereeId}
+02 May 2025 17:33:47,797 INFO  org.example.server.Service 33 unregisterObserver - Observer unregistered for referee ID f4ae0cf1-7459-4d24-bafa-272eaad8b731
+02 May 2025 17:33:47,797 DEBUG org.example.server.AuthentificationService 120 unregisterObserver - Observer unregistered successfully for referee ID: {refereeId}
+02 May 2025 17:33:47,797 INFO  org.example.server.AuthentificationService 81 logout - Referee ID f4ae0cf1-7459-4d24-bafa-272eaad8b731 logged out successfully
+02 May 2025 17:33:47,798 DEBUG org.example.networking.jsonprotocol.ClientJsonWorker 237 sendResponse - sending response {"type":"OK","totalPoints":0}
+02 May 2025 17:33:47,798 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 494 run - Raw response received: {"type":"OK","totalPoints":0}
+02 May 2025 17:33:47,798 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 496 run - Deserialized response: Response[type=OK, error=null, referee=null, result=null, participants=0, participantResults=0, totalPoints=0]
+02 May 2025 17:33:47,800 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 502 run - Adding response to queue (current count: 0)
+02 May 2025 17:33:47,800 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 505 run - New queue count: 1
+02 May 2025 17:33:47,800 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 508 run - Signaling response latch
+02 May 2025 17:33:47,800 DEBUG org.example.networking.jsonprotocol.ServerJsonProxy 510 run - Response latch signaled
+02 May 2025 17:33:47,802 DEBUG org.example.ClientCtrl 107 logout - Logout successful
+02 May 2025 17:33:47,802 DEBUG org.example.MainWindow 485 onClientUpdate - Received update event: LOGOUT_SUCCESSFUL
+02 May 2025 17:33:47,802 DEBUG org.example.ClientCtrl 234 notifyListeners - Update event triggered: LOGOUT_SUCCESSFUL
+02 May 2025 17:33:47,805 DEBUG org.example.LoginWindow 41 <init> - Login window initialized
+02 May 2025 17:33:50,520 DEBUG org.example.LoginWindow$1 54 windowClosing - Login window closing
+02 May 2025 17:33:52,183 DEBUG org.example.LoginWindow$1 54 windowClosing - Login window closing

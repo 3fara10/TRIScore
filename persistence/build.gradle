@@ -1,0 +1,23 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':model');
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    api 'org.apache.logging.log4j:log4j-api:2.23.1'
+    api 'org.apache.logging.log4j:log4j-core:2.23.1'
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+}
+
+test {
+    useJUnitPlatform()
+}
