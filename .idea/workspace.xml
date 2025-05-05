@@ -5,81 +5,223 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed2e0183-7a45-438e-bd19-5a098c476b1f" name="Changes" comment="commit">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.tar" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.zip" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/libs/clientGTK.jar" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/libs/clientGTK.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK.bat" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clientGTK/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clientGTK/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/competition.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/ParticipantResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/ParticipantResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/ClientCtrl$ClientEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/ClientCtrl$UpdateListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/ClientCtrl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/LoginWindow$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/LoginWindow$ButtonListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/LoginWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$ParticipantColumns.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow$ResultColumns.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/MainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/classes/java/main/org/example/StartJsonClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/distributions/clientGTK.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/libs/clientGTK.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/resources/main/client.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/resources/main/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/scripts/clientGTK.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientGTK/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/model/build/libs/model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/libs/model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/build/libs/model.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/example/model/ParticipantResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/example/model/ParticipantResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/networking/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/DTOUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/EventDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/ParticipantDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/ParticipantResultDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/RefereeDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/dto/ResultDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/ClientJsonWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/IServerJsonProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/JsonProtocolUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/RequestType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/ResponseType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/jsonprotocol/ServerJsonProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/utils/AbsConcurrentServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/utils/AbstractServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/utils/JsonConcurrentServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/utils/ServerException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/libs/networking-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/networking/src/main/java/org/example/networking/utils/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/networking/src/main/java/org/example/networking/utils/AbstractServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/utils/JdbcUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/utils/JdbcUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/libs/persistence-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/libs/persistence-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/SQLRepositoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/SQLRepositoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/utils/JdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/utils/JdbcUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/libs/server-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/libs/server-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/resources/main/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/resources/main/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/server.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/server.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/build/classes/java/main/module-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/build/libs/services-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/build/libs/services-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/services/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/CompetitionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/GrpcProtocolUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponse$ResponseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionProtobufs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$AsyncService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceFileDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceFutureStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceMethodDescriptorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceStub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Event$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/EventOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponse$ResponseType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponse$ResponseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponse$ResponseType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponse$ResponseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponse$ResponseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponse$ResponseType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Participant$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ParticipantOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ParticipantResult$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ParticipantResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ParticipantResultOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Referee$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Referee$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Referee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterForUpdatesRequest$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterForUpdatesRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterForUpdatesRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterForUpdatesRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeRequest$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeRequestOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponse$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponse$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponse$ResponseType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponse$ResponseType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeResponseOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Result$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ResultOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UUID$Builder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UUID.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UUIDOrBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotification$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotification$NotificationType$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/classes/java/main/org/example/networking/utils/GrpcConcurrentServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/main/competition.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/competition.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/auth.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/backend.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/billing.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/client.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/config_change.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/consumer.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/distribution.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/endpoint.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/field_behavior.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/field_info.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/http.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/httpbody.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/label.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/launch_stage.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/logging.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/metric.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/monitored_resource.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/monitoring.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/policy.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/resource.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/routing.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/service.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/source_info.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/system_parameter.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/usage.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/api/visibility.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/cloud/audit/audit_log.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/cloud/location/locations.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/geo/type/viewport.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/logging/type/http_request.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/logging/type/log_severity.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/longrunning/operations.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/api.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/descriptor.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/empty.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/field_mask.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/source_context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/struct.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/timestamp.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/type.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/protobuf/wrappers.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/rpc/code.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/rpc/context/attribute_context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/rpc/context/audit_context.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/rpc/error_details.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/rpc/status.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/calendar_period.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/color.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/date.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/datetime.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/dayofweek.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/decimal.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/expr.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/fraction.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/latlng.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/localized_text.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/money.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/month.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/phone_number.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/quaternion.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/extracted-include-protos/test/google/type/timeofday.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/generated/source/proto/main/grpc/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/networking/build/generated/source/proto/main/grpc/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepositoryDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepositoryEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepositoryParticipant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepositoryReferee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/IRepositoryResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/RepositoryException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryParticipant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryReferee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/SQLRepositoryResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/ValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/utils/JdbcUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/libs/persistence-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/AuthentificationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/BcryptPasswordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ParticipantService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ResultService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/StartGrpcServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/StartJsonServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/libs/server-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/resources/main/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/resources/main/server.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/libs/services-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +257,9 @@
         <task path="$PROJECT_DIR$/Frontend">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/networking">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -138,6 +283,29 @@
                 <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
+                <item name="networking" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
+                <item name="networking" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
+                <item name="networking" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="mpp-project-java-3fara10" type="f1a62948:ProjectNode" />
+                <item name="persistence" type="2d1252cf:ModuleNode" />
               </path>
             </expand>
             <select />
@@ -286,11 +454,11 @@
       <command value="gradle ProiectJava:dependencies" />
       <command value="gradle ./gradlew clean generateProto" />
       <command value="gradle clean build" />
-      <command value="gradle clean generateProto" />
       <command value="gradle build" />
+      <command value="gradle clean generateProto" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.client 1">
+  <component name="RunManager" selected="Application.GrpcServer">
     <configuration name="GrpcServer" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="23" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -326,52 +494,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="mpp-proiect-java-3fara10 [./gradlew clean generateProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="./gradlew" />
-            <option value="clean" />
-            <option value="generateProto" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="mpp-proiect-java-3fara10 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
     </configuration>
     <configuration name="mpp-proiect-java-3fara10 [clean build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -419,18 +541,62 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="mpp-proiect-java-3fara10 [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="mpp-proiect-java-3fara10 [generateProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--scan --stacktrace" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
+            <option value="generateProto" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="mpp-proiect-java-3fara10 [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="mpp-proiect-java-3fara10:networking [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/networking" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -459,19 +625,19 @@
       <item itemvalue="Application.server" />
       <item itemvalue="Application.client 1" />
       <item itemvalue="Application.client 2" />
-      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [./gradlew clean generateProto]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [generateProto]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [jar]" />
+      <item itemvalue="Gradle.mpp-proiect-java-3fara10:networking [jar]" />
       <item itemvalue="Gradle.mpp-proiect-java-3fara10 [clean build]" />
       <item itemvalue="Gradle.mpp-proiect-java-3fara10 [clean generateProto]" />
-      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [build]" />
-      <item itemvalue="Gradle.mpp-proiect-java-3fara10 [run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [clean build]" />
         <item itemvalue="Gradle.mpp-proiect-java-3fara10 [clean generateProto]" />
-        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [./gradlew clean generateProto]" />
-        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [build]" />
-        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [run]" />
+        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [clean build]" />
+        <item itemvalue="Gradle.mpp-proiect-java-3fara10:networking [jar]" />
+        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [jar]" />
+        <item itemvalue="Gradle.mpp-proiect-java-3fara10 [generateProto]" />
       </list>
     </recent_temporary>
   </component>
@@ -747,7 +913,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746196461458</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="commit">
+      <option name="closed" value="true" />
+      <created>1746439996180</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1746439996180</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -810,11 +984,6 @@
           <url>file://$PROJECT_DIR$/server/src/main/java/org/example/server/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/persistence/src/main/java/org/example/repository/SQLRepositoryDTO.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/networking/src/main/java/org/example/networking/grpcprotocol/ClientGrpcWorker.java</url>
