@@ -1,0 +1,149 @@
+* [33mcommit 1e47987ece4250a2527b672cd1801e11071e19dc[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mlaborator5[m[33m, [m[1;31morigin/laborator5[m[33m)[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon May 5 13:13:15 2025 +0300
+[31m|[m 
+[31m|[m     commit
+[31m|[m 
+* [33mcommit 0756f75b64fe2cf7a38e3b49875b8d77d2b00610[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon May 5 12:55:03 2025 +0300
+[31m|[m 
+[31m|[m     commit
+[31m|[m 
+* [33mcommit adbc628f8819887b04b4c372ddbc3482d96a57cd[m[33m ([m[1;31morigin/laborator4[m[33m, [m[1;32mlaborator4[m[33m)[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Fri May 2 17:34:21 2025 +0300
+[31m|[m 
+[31m|[m     commit
+[31m|[m 
+* [33mcommit 2e347e7a9322e1a05cf7b1e71ceba87c314da38a[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Fri May 2 17:34:03 2025 +0300
+[31m|[m 
+[31m|[m     commit
+[31m|[m 
+* [33mcommit d5cf22390fd544961522f6c9444e861f90a7f8aa[m[33m ([m[1;31morigin/laborator3[m[33m, [m[1;32mlaborator3[m[33m)[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon Mar 31 14:51:34 2025 +0300
+[31m|[m 
+[31m|[m     Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory.
+[31m|[m 
+* [33mcommit 65842d6409437c9f7e4ded8a21f7353f494ba5f6[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon Mar 31 14:50:14 2025 +0300
+[31m|[m 
+[31m|[m     Implemented Services and UI for Java version of the project. Added efficient implementations and 3 methods in SQLRepositoryResult. Problem at handling threads leak memory.
+[31m|[m 
+* [33mcommit e552e1cb0c8896ff20b98d9382cd93b1b5359ad7[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Sat Mar 29 18:23:57 2025 +0200
+[31m|[m 
+[31m|[m     Implemented SQL Repository classes for Java version of the project. Added efficient implementations for Event, Participant, Referee, Result, and DTO repositories.
+[31m|[m 
+* [33mcommit 4b7f0e8fff5a927114ef474b24b2467cbeb58b48[m[33m ([m[1;31morigin/laborator2[m[33m, [m[1;32mlaborator2[m[33m)[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Sat Mar 29 18:22:19 2025 +0200
+[31m|[m 
+[31m|[m     Implemented SQL Repository classes for Java version of the project. Added efficient implementations for Event, Participant, Referee, Result, and DTO repositories.
+[31m|[m 
+* [33mcommit 0ba6b1b5a592fcbc516e039ab2f042914c561f0a[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Thu Mar 20 11:30:42 2025 +0200
+[31m|[m 
+[31m|[m     Updated main and classes from domain.
+[31m|[m 
+* [33mcommit 7d857aeb5490c8ea972126f3c626cf321aa92eb4[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Thu Mar 20 11:29:53 2025 +0200
+[31m|[m 
+[31m|[m     Add SQLRepositoryEvent implementation with UUID support
+[31m|[m     
+[31m|[m     Implemented SQLRepositoryEvent,SQLRepositoryReferee, SQLRepositoryParticipant, SQLRepositoryResult class that provides CRUD operations for Event entities with UUID identifiers. The implementation includes:
+[31m|[m     
+[31m|[m     - Proper exception handling with ValidationException and RepositoryException
+[31m|[m     - Resource management using try-with-resources
+[31m|[m     - UUID collision detection in the generateEvent method
+[31m|[m     - Comprehensive logging with Log4j
+[31m|[m     - Connection management through JdbcUtils
+[31m|[m     - Full CRUD operations: findOne, findAll, add, update, and delete
+[31m|[m     
+[31m|[m     All methods validate input parameters and handle database operations safely with proper resource cleanup.
+[31m|[m 
+* [33mcommit 0141353bcc977e525c18e4d4998ea1298cbe4524[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Thu Mar 20 11:29:36 2025 +0200
+[31m|[m 
+[31m|[m     Add SQLRepositoryEvent implementation with UUID support
+[31m|[m     
+[31m|[m     Implemented SQLRepositoryEvent,SQLRepositoryReferee, SQLRepositoryParticipant, SQLRepositoryResult class that provides CRUD operations for Event entities with UUID identifiers. The implementation includes:
+[31m|[m     
+[31m|[m     - Proper exception handling with ValidationException and RepositoryException
+[31m|[m     - Resource management using try-with-resources
+[31m|[m     - UUID collision detection in the generateEvent method
+[31m|[m     - Comprehensive logging with Log4j
+[31m|[m     - Connection management through JdbcUtils
+[31m|[m     - Full CRUD operations: findOne, findAll, add, update, and delete
+[31m|[m     
+[31m|[m     All methods validate input parameters and handle database operations safely with proper resource cleanup.
+[31m|[m 
+* [33mcommit ea7328a5a899ce302ebf71da21d9ac007027d333[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Wed Mar 19 21:56:48 2025 +0200
+[31m|[m 
+[31m|[m     Add SQLRepositoryEvent implementation with UUID support
+[31m|[m     
+[31m|[m     Implemented SQLRepositoryEvent class that provides CRUD operations for Event entities with UUID identifiers. The implementation includes:
+[31m|[m     
+[31m|[m     - Proper exception handling with ValidationException and RepositoryException
+[31m|[m     - Resource management using try-with-resources
+[31m|[m     - UUID collision detection in the generateEvent method
+[31m|[m     - Comprehensive logging with Log4j
+[31m|[m     - Connection management through JdbcUtils
+[31m|[m     - Full CRUD operations: findOne, findAll, add, update, and delete
+[31m|[m     
+[31m|[m     All methods validate input parameters and handle database operations safely with proper resource cleanup.
+[31m|[m 
+* [33mcommit 255c93f241d68ebb93371ce455b81880e00020f0[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Wed Mar 19 20:57:49 2025 +0200
+[31m|[m 
+[31m|[m     commit:Changed the id from Long to UUID.
+[31m|[m 
+* [33mcommit 435f47281b936e9818f331b067708fd991e153f3[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Wed Mar 19 20:56:57 2025 +0200
+[31m|[m 
+[31m|[m     commit:Changed the id from Long to UUID.
+[31m|[m 
+* [33mcommit 7c87ac77e57d5db8c42c948399a6b196d39874af[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Wed Mar 19 18:42:02 2025 +0200
+[31m|[m 
+[31m|[m     commit:Added detailed class-level documentation to IRepository, IRepositoryEvent, IRepositoryParticipant, IRepositoryReferee, IRepositoryResult
+[31m|[m 
+* [33mcommit c17659c3882ea5fb267a03f33aa0d8ab25c411fb[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Wed Mar 19 18:34:55 2025 +0200
+[31m|[m 
+[31m|[m     commit:Added detailed class-level documentation to Entity, Event, Participant, Referee, and Result classes
+[31m|[m 
+* [33mcommit 7b5903e6ad3c7faef3e9aa6bc7299a790c2d1fd2[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon Mar 17 15:29:46 2025 +0200
+[31m|[m 
+[31m|[m     commit:lab 2
+[31m|[m 
+* [33mcommit e6cade5c9aa56f1053e714deb6ef10234c74c080[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon Mar 17 15:26:10 2025 +0200
+[31m|[m 
+[31m|[m     commit:lab 2
+[31m|[m 
+* [33mcommit c843986138bdec747a7cb792c5d8b17ac9926c94[m
+[31m|[m Author: 3fara10 <122831964+3fara10@users.noreply.github.com>
+[31m|[m Date:   Mon Mar 17 09:59:57 2025 +0200
+[31m|[m 
+[31m|[m     commit: Changed the names in english and refactored the interfaces.
+[31m|[m 
+* [33mcommit 7b927c87bfeaf8a37573f5f3dfcdd10e83664090[m[33m ([m[1;31morigin/laborator1[m[33m, [m[1;32mlaborator1[m[33m)[m
+[31m|[m Author: 3fara10 <122
