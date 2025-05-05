@@ -16,6 +16,8 @@ dependencies {
     api 'org.apache.logging.log4j:log4j-api:2.23.1'
     api 'org.apache.logging.log4j:log4j-core:2.23.1'
     implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:12.4.0.jre11'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc_auth:12.4.0.x64'
 }
 
 test {

@@ -56,6 +56,7 @@ public class SQLRepositoryDTO implements IRepositoryDTO {
                             dto.setParticipantID(participantId);
                             dto.setParticipantName(participantName);
                             dto.setPoints(points);
+                            dto.setId(UUID.randomUUID());
 
                             results.add(dto);
                         }
@@ -110,7 +111,7 @@ public class SQLRepositoryDTO implements IRepositoryDTO {
                                 dto.setParticipantID(participantId);
                                 dto.setParticipantName(participantName);
                                 dto.setPoints(points);
-
+                                dto.setId(UUID.randomUUID());
                                 results.add(dto);
                             }
                         }

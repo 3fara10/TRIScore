@@ -22,21 +22,33 @@ public class JdbcUtils {
         String user = jdbcProps.getProperty("jdbc.user");
         String pass = jdbcProps.getProperty("jdbc.pass");
         logger.info("trying to connect to database ... {}", url);
-        logger.info("user: {}", user);
-        logger.info("pass: {}", pass);
 
-        Connection con = null;
+        if (user != null && pass != null) {
+            logger.info("user: {}", user);
+            logger.info("pass: {}", pass);
+        } else {
+            logger.info("Using integrated security");
+        }
+
         try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            Connection con;
             if (user != null && pass != null)
                 con = DriverManager.getConnection(url, user, pass);
             else
                 con = DriverManager.getConnection(url);
+
+            logger.traceExit(con);
+            return con;
         } catch (SQLException e) {
             logger.error("Error getting connection", e);
             System.out.println("Error getting connection " + e);
+            throw new RuntimeException("Couldn't connect to the database: " + e.getMessage(), e);
+        } catch (ClassNotFoundException e) {
+            logger.error("JDBC Driver not found", e);
+            System.out.println("JDBC Driver not found " + e);
+            throw new RuntimeException("JDBC Driver not found: " + e.getMessage(), e);
         }
-
-        logger.traceExit(con);
-        return con;
     }
 }

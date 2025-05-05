@@ -32,6 +32,10 @@ public abstract class AbstractServer {
         }
     }
 
+    public int getPort() {
+        return port;
+    }
+
     protected abstract  void processRequest(Socket client);
     public void stop() throws ServerException {
         try {

@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'com.google.protobuf' version '0.9.4'
 }
 
 group = 'org.example'
@@ -12,13 +13,98 @@ repositories {
 dependencies {
     implementation project(':services')
     implementation project(':model')
+
+    // Corect: versiuni moderne și compatibile
+    implementation 'com.google.protobuf:protobuf-java:4.28.2'
+    implementation 'io.grpc:grpc-protobuf:1.62.2'
+    implementation 'io.grpc:grpc-stub:1.62.2'
+    implementation 'io.grpc:grpc-netty-shaded:1.62.2'
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
     implementation 'org.apache.logging.log4j:log4j-core:2.24.3'
     implementation 'org.apache.logging.log4j:log4j-api:2.24.3'
     implementation 'com.google.code.gson:gson:2.9.0'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
     useJUnitPlatform()
+}
+sourceSets {
+    main {
+        java {
+            srcDirs += 'build/generated/source/proto/main/java'
+            srcDirs += 'build/generated/source/proto/main/grpc'
+        }
+    }
+}
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.25.1"
+    }
+    plugins {
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:1.62.2"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                grpc {}
+            }
+        }
+    }
+}
+
+task fixGrpcImports {
+    doLast {
+        println "Fixing gRPC imports..."
+
+        def grpcFile = file("${buildDir}/generated/source/proto/main/grpc/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc.java")
+
+        if (grpcFile.exists()) {
+            String content = grpcFile.text
+
+            // Add the necessary imports at the beginning of the file
+            String packageDeclaration = "package org.example.networking.grpcprotocol.generated;"
+            String imports = """
+import org.example.networking.grpcprotocol.generated.LoginRequest;
+import org.example.networking.grpcprotocol.generated.LoginResponse;
+import org.example.networking.grpcprotocol.generated.LogoutRequest;
+import org.example.networking.grpcprotocol.generated.LogoutResponse;
+import org.example.networking.grpcprotocol.generated.RegisterRefereeRequest;
+import org.example.networking.grpcprotocol.generated.RegisterRefereeResponse;
+import org.example.networking.grpcprotocol.generated.GetAllParticipantsRequest;
+import org.example.networking.grpcprotocol.generated.GetAllParticipantsResponse;
+import org.example.networking.grpcprotocol.generated.GetParticipantsForEventRequest;
+import org.example.networking.grpcprotocol.generated.GetParticipantsForEventResponse;
+import org.example.networking.grpcprotocol.generated.AddResultRequest;
+import org.example.networking.grpcprotocol.generated.AddResultResponse;
+import org.example.networking.grpcprotocol.generated.RegisterForUpdatesRequest;
+import org.example.networking.grpcprotocol.generated.UpdateNotification;
+"""
+
+            content = content.replace(packageDeclaration, packageDeclaration + "\n" + imports)
+
+            grpcFile.text = content
+            println "Fixed imports in CompetitionServiceGrpc.java"
+        } else {
+            println "CompetitionServiceGrpc.java not found at ${grpcFile.path}"
+        }
+    }
+}
+
+// Make sure this runs after protobuf generation
+tasks.findByName('generateProto')?.finalizedBy(fixGrpcImports)
+compileJava.dependsOn(fixGrpcImports)
+
+// Forțare versiuni pentru a evita conflicte
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.protobuf:protobuf-java:3.25.1'
+        force 'io.grpc:grpc-protobuf:1.62.2'
+        force 'io.grpc:grpc-stub:1.62.2'
+        force 'io.grpc:grpc-netty-shaded:1.62.2'
+    }
 }

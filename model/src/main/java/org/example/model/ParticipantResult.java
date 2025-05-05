@@ -12,6 +12,7 @@ public class ParticipantResult extends Entity<UUID>
     public ParticipantResult(UUID id, String participantName, int points)
     {
         super(id);
+        ParticipantID=id;
         ParticipantName = participantName;
         this.points = points;
     }
