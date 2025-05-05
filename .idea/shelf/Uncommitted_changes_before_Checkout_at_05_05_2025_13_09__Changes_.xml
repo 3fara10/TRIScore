@@ -1,0 +1,193 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]" date="1746439757363" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 05.05.2025 13:09 [Changes]" />
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/utils/ServerException.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/ServerException.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Participant$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/Participant$1.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$MethodHandlers.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/CompetitionServiceGrpc$MethodHandlers.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/utils/AbsConcurrentServer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/AbsConcurrentServer.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/ClientGrpcWorker.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/ClientGrpcWorker.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/dto/ResultDTO.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/ResultDTO.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponse$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/GetParticipantsForEventResponse$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutRequest$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/LogoutRequest$1.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceBlockingStub.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/CompetitionServiceGrpc$CompetitionServiceBlockingStub.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceImplBase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/CompetitionServiceGrpc$CompetitionServiceImplBase.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/ParticipantResult$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/ParticipantResult$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeRequest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/RegisterRefereeRequest.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponse.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/AddResultResponse.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponse$ResponseType.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/LogoutResponse$ResponseType.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginResponse$ResponseType$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/LoginResponse$ResponseType$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/fileHashes.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="model/build/libs/model-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="model/build/libs/model-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/model-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponse$ResponseType$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/AddResultResponse$ResponseType$1.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="clientGTK/build/libs/clientGTK.jar" />
+    <option name="AFTER_PATH" value="clientGTK/build/libs/clientGTK.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/clientGTK.jar" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/jsonprotocol/Request.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/Request.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="services/build/libs/services-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="services/build/libs/services-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/services-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="clientGTK/build/scripts/clientGTK" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetParticipantsForEventResponseOrBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/GetParticipantsForEventResponseOrBuilder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LogoutResponse$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/LogoutResponse$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultRequestOrBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/AddResultRequestOrBuilder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Result$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/Result$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RefereeOrBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/RefereeOrBuilder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/GetAllParticipantsResponseOrBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/GetAllParticipantsResponseOrBuilder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/RegisterRefereeRequest$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/RegisterRefereeRequest$1.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/LoginRequest$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/LoginRequest$1.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Event$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/Event$Builder.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="server/build/libs/server-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="server/build/libs/server-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/server-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotification$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/UpdateNotification$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UUID$1.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/UUID$1.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotificationOrBuilder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/UpdateNotificationOrBuilder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/Event.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/Event.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/UpdateNotification$NotificationType.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/UpdateNotification$NotificationType.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/AddResultResponse$Builder.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/AddResultResponse$Builder.class" />
+  </binary>
+  <binary>
+    <option name="AFTER_PATH" value="networking/build/classes/java/main/org/example/networking/grpcprotocol/generated/CompetitionServiceGrpc$CompetitionServiceBaseDescriptorSupplier.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/CompetitionServiceGrpc$CompetitionServiceBaseDescriptorSupplier.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/file-system.probe" />
+    <option name="AFTER_PATH" value=".gradle/file-system.probe" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/file-system.probe" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="clientGTK/build/distributions/clientGTK.tar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="clientGTK/build/distributions/clientGTK.zip" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="persistence/build/libs/persistence-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="persistence/build/libs/persistence-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/persistence-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value=".gradle/8.8/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2025_13_09_[Changes]/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="clientGTK/build/scripts/clientGTK.bat" />
+  </binary>
+</changelist>
