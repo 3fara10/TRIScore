@@ -1,0 +1,6 @@
+05 May 2025 14:21:37,636 INFO  org.example.StartJsonClient 22 main - Client properties set. 
+05 May 2025 14:21:37,638 INFO  org.example.StartJsonClient 35 main - Using server IP localhost
+05 May 2025 14:21:37,640 INFO  org.example.StartJsonClient 36 main - Using server port 55556
+05 May 2025 14:21:37,679 DEBUG org.example.ClientCtrl 55 <init> - TriathlonClientCtrl initialized
+05 May 2025 14:21:37,921 DEBUG org.example.LoginWindow 41 <init> - Login window initialized
+05 May 2025 14:21:39,350 DEBUG org.example.LoginWindow$1 54 windowClosing - Login window closing
