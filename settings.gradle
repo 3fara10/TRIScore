@@ -5,4 +5,5 @@ include 'networking'
 include 'persistence'
 include 'server'
 include 'services'
+include 'RestServices'
 

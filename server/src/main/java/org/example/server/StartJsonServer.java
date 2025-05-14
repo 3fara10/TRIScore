@@ -2,6 +2,7 @@ package org.example.server;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.example.model.Event;
 import org.example.networking.utils.AbstractServer;
 import org.example.networking.utils.JsonConcurrentServer;
 import org.example.networking.utils.ServerException;
@@ -14,10 +15,11 @@ import org.example.service.IResultService;
 import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.UUID;
 
 public class StartJsonServer {
     private static Logger logger = LogManager.getLogger(StartJsonServer.class);
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Properties serverProps=new Properties();
         try {
             serverProps.load(StartJsonServer.class.getResourceAsStream("/server.properties"));
@@ -28,9 +30,9 @@ public class StartJsonServer {
         }
 
 
-        IRepositoryEvent repositoryEvent = new SQLRepositoryEvent(serverProps);
-        IRepositoryParticipant repositoryParticipant = new SQLRepositoryParticipant(serverProps);
-        IRepositoryResult repositoryResult = new SQLRepositoryResult(serverProps);
+        IRepositoryEvent repositoryEvent = new HibernateRepositoryEvent(serverProps);
+        IRepositoryParticipant repositoryParticipant = new HibernateRepositoryParticipant(serverProps);
+        IRepositoryResult repositoryResult = new HibernateRepositoryResult(serverProps);
         IRepositoryReferee repositoryReferee = new SQLRepositoryReferee(serverProps);
         IRepositoryDTO repositoryDTO = new SQLRepositoryDTO(serverProps);
 
@@ -38,6 +40,8 @@ public class StartJsonServer {
         IAuthentificationService authenticationService = new AuthentificationService(repositoryReferee, passwordService);
         IParticipantService participantService = new ParticipantService(repositoryDTO);
         IResultService resultService = new ResultService(repositoryResult);
+
+        //authenticationService.registerReferee("lala",new Event(UUID.fromString("611B905C-90A6-43B2-8316-7488EA08DFF2"),"alergat"),"anto","anto",null);
 
         int ServerPort=0;
         try {

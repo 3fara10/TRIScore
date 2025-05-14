@@ -1,5 +1,7 @@
 package org.example.model;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -8,20 +10,27 @@ import java.util.UUID;
  * This class extends the base Entity class with a UUID type identifier.
  * It stores the relationship between an Event, a Participant, and the points scored.
  */
+@jakarta.persistence.Entity
+@Table(name="results")
 public class Result extends Entity<UUID> {
     /**
      * The event associated with this result.
      */
+    @ManyToOne()
+    @JoinColumn(name = "event_id")
     private Event event;
 
     /**
      * The participant who achieved this result.
      */
+    @ManyToOne()
+    @JoinColumn(name = "participant_id")
     private Participant participant;
 
     /**
      * The number of points scored by the participant in the event.
      */
+    @Column(name = "points", nullable = false)
     private int points;
 
     /**

@@ -2,7 +2,6 @@ package org.example.networking.utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.example.networking.jsonprotocol.ClientJsonWorker;
 import org.example.service.IAuthentificationService;
 import org.example.service.IParticipantService;
 import org.example.service.IResultService;

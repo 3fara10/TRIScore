@@ -1,5 +1,8 @@
 package org.example.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -8,10 +11,13 @@ import java.util.UUID;
  * This class extends the base Entity class with a UUID type identifier.
  * It adds event-specific fields such as name.
  */
+@jakarta.persistence.Entity
+@Table(name="events")
 public class Event extends Entity<UUID> {
     /**
      * The name of the event.
      */
+    @Column(name="name",nullable = false)
     private String name;
 
     /**

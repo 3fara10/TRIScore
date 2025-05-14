@@ -165,7 +165,6 @@ public class SQLRepositoryParticipant implements IRepositoryParticipant {
                         int rowsAffected = preStmt.executeUpdate();
                         if (rowsAffected > 0) {
                             logger.traceExit("Successfully updated participant with id {}", participant.getId());
-                            // Return the updated participant
                             Participant updatedParticipant = new Participant(participant.getId(), newParticipant.getName());
                             return Optional.of(updatedParticipant);
                         } else {

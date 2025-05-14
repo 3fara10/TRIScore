@@ -9,25 +9,21 @@ option optimize_for = SPEED;
 
 package competition;
 
-// Service definition
 service CompetitionService {
-  // Authentication operations
+
   rpc Login (LoginRequest) returns (LoginResponse);
   rpc Logout (LogoutRequest) returns (LogoutResponse);
   rpc RegisterReferee (RegisterRefereeRequest) returns (RegisterRefereeResponse);
 
-  // Participant operations
   rpc GetAllParticipantsSortedByName (GetAllParticipantsRequest) returns (GetAllParticipantsResponse);
   rpc GetParticipantsWithResultsForEvent (GetParticipantsForEventRequest) returns (GetParticipantsForEventResponse);
 
-  // Result operations
   rpc AddResult (AddResultRequest) returns (AddResultResponse);
 
-  // Observer operations
   rpc RegisterForUpdates (RegisterForUpdatesRequest) returns (stream UpdateNotification);
 }
 
-// Common types
+
 message UUID {
   string value = 1;
 }
@@ -43,7 +39,7 @@ message Referee {
   UUID eventId = 3;
   string eventName = 4;
   string username = 5;
-  string password = 6; // Hash in responses, plain text in requests
+  string password = 6;
 }
 
 message Participant {

@@ -14,7 +14,6 @@ dependencies {
     implementation project(':services')
     implementation project(':model')
 
-    // Corect: versiuni moderne și compatibile
     implementation 'com.google.protobuf:protobuf-java:4.28.2'
     implementation 'io.grpc:grpc-protobuf:1.62.2'
     implementation 'io.grpc:grpc-stub:1.62.2'
@@ -34,6 +33,7 @@ test {
 sourceSets {
     main {
         java {
+            srcDirs = ['src/main/java']
             srcDirs += 'build/generated/source/proto/main/java'
             srcDirs += 'build/generated/source/proto/main/grpc'
         }

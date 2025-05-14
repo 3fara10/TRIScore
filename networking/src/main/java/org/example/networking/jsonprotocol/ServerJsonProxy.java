@@ -18,10 +18,6 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- * JSON-based proxy implementation for remote service calls.
- * This class handles the communication with the server through JSON protocol.
- */
 public class ServerJsonProxy implements IServerJsonProxy {
     private final String host;
     private final int port;
@@ -39,12 +35,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
     private final Gson gsonFormatter;
     private final ReentrantLock lock = new ReentrantLock();
 
-    /**
-     * Creates a new proxy with the specified host and port.
-     *
-     * @param host The server host
-     * @param port The server port
-     */
+
     public ServerJsonProxy(String host, int port) {
         this.host = host;
         this.port = port;
@@ -52,14 +43,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
         this.gsonFormatter = new Gson();
     }
 
-    /**
-     * Logs in a referee to the system.
-     *
-     * @param username The referee's username
-     * @param password The referee's password
-     * @param observer The observer to be notified of updates
-     * @return The logged in referee
-     */
+
     @Override
     public Referee login(String username, String password, IObserver observer) throws Exception {
         initializeConnection();
@@ -90,11 +74,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
         throw new Exception("Unknown response type: " + response.getType());
     }
 
-    /**
-     * Logs out a referee from the system.
-     *
-     * @param refereeId The ID of the referee to log out
-     */
     @Override
     public void logout(UUID refereeId) throws Exception {
         try {
@@ -114,14 +93,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Adds a new result to the system.
-     *
-     * @param participantId The participant ID
-     * @param eventId The event ID
-     * @param points The points scored
-     * @return An Optional containing the result if successful
-     */
     @Override
     public Optional<Result> addResult(UUID participantId, UUID eventId, int points) throws Exception {
         try {
@@ -154,12 +125,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Gets all participants sorted by name with their total points.
-     *
-     * @return An Iterable of ParticipantResult objects
-     * @throws Exception If retrieving the participants fails
-     */
     @Override
     public Iterable<ParticipantResult> getAllParticipantsSortedByNameWithTotalPoints() throws Exception {
         try {
@@ -204,13 +169,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Gets participants with results for a specific event.
-     *
-     * @param eventId The event ID
-     * @return An Iterable of ParticipantResult objects
-     * @throws Exception If retrieving the participants fails
-     */
+
     @Override
     public Iterable<ParticipantResult> getParticipantsWithResultsForEvent(UUID eventId) throws Exception {
         try {
@@ -515,7 +474,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
             } catch (Exception e) {
                 finished = true;
                 logger.error("Error in run method: {}", e.getMessage());
-                logger.error("Stack trace: {}", e.getStackTrace());
                 try {
                     responseLatch.countDown();
                 } catch (Exception ex) {

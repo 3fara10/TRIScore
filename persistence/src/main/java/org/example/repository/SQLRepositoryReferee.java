@@ -154,10 +154,10 @@ public class SQLRepositoryReferee implements IRepositoryReferee {
                     int rowsAffected = statement.executeUpdate();
                     if (rowsAffected > 0) {
                         logger.debug("Successfully saved referee with id {}", referee.getId());
-                        return Optional.empty(); // Success, return empty Optional
+                        return Optional.of(referee); // Success, return empty Optional
                     } else {
                         logger.error("Failed to insert referee, no rows affected.");
-                        return Optional.of(referee); // Failure, return the referee
+                        return Optional.empty(); // Failure, return the referee
                     }
                 }
             }
@@ -294,6 +294,7 @@ public class SQLRepositoryReferee implements IRepositoryReferee {
                 throw new RepositoryException("Validation error: " + e.getMessage(), e);
             }
     }
+
 
     private Referee generateReferee(Referee referee) {
         UUID newId = UUID.randomUUID();

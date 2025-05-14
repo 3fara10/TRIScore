@@ -1,15 +1,16 @@
 package org.example.model;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 
-/**
- * Abstract base class representing an entity with a unique identifier.
- * This class serves as the foundation for all domain entities in the application.
- *
- * @param <ID> The type of the identifier (e.g., Integer, Long, String)
- */
+@MappedSuperclass
 public abstract class Entity<ID> {
     /**
      * The unique identifier for this entity.
      */
+    @Id
+    @Column(name = "id")
     protected ID id;
 
     /**
@@ -74,3 +75,4 @@ public abstract class Entity<ID> {
         return id != null ? id.hashCode() : 0;
     }
 }
+
