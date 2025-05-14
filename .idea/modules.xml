@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/RestServices.iml" filepath="$PROJECT_DIR$/RestServices.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/networking/mpp-project-java-3fara10.networking.main.iml" filepath="$PROJECT_DIR$/.idea/modules/networking/mpp-project-java-3fara10.networking.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/persistence/mpp-project-java-3fara10.persistence.main.iml" filepath="$PROJECT_DIR$/.idea/modules/persistence/mpp-project-java-3fara10.persistence.main.iml" />
     </modules>

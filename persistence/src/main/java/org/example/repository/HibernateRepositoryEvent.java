@@ -129,7 +129,44 @@ public class HibernateRepositoryEvent implements IRepositoryEvent {
 
     @Override
     public Optional<Event> delete(UUID id) {
-        throw new UnsupportedOperationException("This method is not implemented yet.");
+        logger.traceEntry("Deleting event with id {}", id);
+
+        if (id == null) {
+            logger.error("Attempted to delete event with null id");
+            throw new ValidationException("Attempted to delete event with null id");
+        }
+
+        try {
+            return hibernateUtils.getSessionFactory().fromTransaction(session -> {
+                Event eventToDelete = session.get(Event.class, id);
+                if (eventToDelete == null) {
+                    logger.warn("Event with id {} not found for deletion", id);
+                    return Optional.empty();
+                }
+
+                Event deletedEvent = new Event(
+                        eventToDelete.getId(),
+                        eventToDelete.getName()
+                );
+
+
+                session.createNativeQuery("DELETE FROM results WHERE event_id = :eventId")
+                        .setParameter("eventId", id)
+                        .executeUpdate();
+
+                session.createNativeQuery("DELETE FROM referees WHERE event_id = :eventId")
+                        .setParameter("eventId", id)
+                        .executeUpdate();
+
+                session.remove(eventToDelete);
+                logger.info("Successfully deleted event with id {}", id);
+
+                return Optional.of(deletedEvent);
+            });
+        } catch (Exception e) {
+            logger.error("Error deleting event with id {}: {}", id, e.getMessage(), e);
+            throw new RepositoryException("Error deleting event: " + e.getMessage(), e);
+        }
     }
 
     private Event generateEvent(Event event) {

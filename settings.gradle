@@ -6,4 +6,5 @@ include 'persistence'
 include 'server'
 include 'services'
 include 'RestServices'
+include 'frontend'
 

@@ -1,5 +1,10 @@
 package org.example.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
 import java.util.Objects;
 import java.util.UUID;
 
@@ -9,25 +14,33 @@ import java.util.UUID;
  * It stores referee-specific information such as name, associated event,
  * and authentication credentials.
  */
+
+@jakarta.persistence.Entity
+@Table(name = "referees")
 public class Referee extends Entity<UUID> {
     /**
      * The name of the referee.
      */
+    @Column(name = "name",nullable=false)
     private String name;
 
     /**
      * The event that this referee is assigned to.
      */
+    @ManyToOne()
+    @JoinColumn(name = "event_id", nullable = false)
     private Event event;
 
     /**
      * The username for referee authentication.
      */
+    @Column(name = "username", unique = true, nullable = false)
     private String username;
 
     /**
      * The password for referee authentication.
      */
+    @Column(name = "password", nullable = false)
     private String password;
 
     /**
