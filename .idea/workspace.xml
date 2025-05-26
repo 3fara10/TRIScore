@@ -5,33 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed2e0183-7a45-438e-bd19-5a098c476b1f" name="Changes" comment="rest services">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.8/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/build/classes/java/main/org/example/rest/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/build/classes/java/main/org/example/rest/controller/EventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/RestServices/build/classes/java/main/org/example/rest/controller/EventController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/compileTransaction/stash-dir/EventClient$CustomRestClientInterceptor.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/compileTransaction/stash-dir/EventClient.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/compileTransaction/stash-dir/StartEventRestClient.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestServices/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/RestServices/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/compileTransaction/stash-dir/EventController.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/RestServices/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RestServices/src/main/java/org/example/rest/controller/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/RestServices/src/main/java/org/example/rest/controller/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/test.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/example/model/ParticipantResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/example/model/ParticipantResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/src/main/java/org/example/model/Referee.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/org/example/model/Referee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/ParticipantResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/ParticipantResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/Referee.class" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/classes/java/main/org/example/model/Referee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/libs/model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/libs/model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/Entity.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/Event.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/Participant.class.uniqueId6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/ParticipantResult.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/Referee.class.uniqueId5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/Result.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/model/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/networking/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/networking/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryParticipant.class" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryParticipant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/classes/java/main/org/example/repository/HibernateRepositoryResult.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/persistence/build/libs/persistence-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/libs/persistence-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/compileTransaction/stash-dir/HibernateRepositoryEvent.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/tmp/compileJava/compileTransaction/stash-dir/HibernateRepositoryEvent.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/compileTransaction/stash-dir/HibernateRepositoryEvent.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/persistence/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/IRepositoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/IRepositoryDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryParticipant.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryParticipant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/repository/HibernateRepositoryResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/persistence/src/main/java/org/example/utils/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/persistence/src/main/java/org/example/utils/HibernateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/module-info.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/AuthentificationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/AuthentificationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/BcryptPasswordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/BcryptPasswordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ParticipantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ParticipantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ResultService.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/ResultService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/classes/java/main/org/example/server/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/compileTransaction/stash-dir/AuthentificationService.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/compileTransaction/stash-dir/ParticipantService.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/compileTransaction/stash-dir/ResultService.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId4" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/server/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/AuthentificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/example/server/AuthentificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/BcryptPasswordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/example/server/BcryptPasswordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/ParticipantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/example/server/ParticipantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/ResultService.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/example/server/ResultService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/example/server/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/example/server/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/libs/services-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/build/libs/services-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/compileTransaction/stash-dir/IAuthentificationService.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/compileTransaction/stash-dir/IParticipantService.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/compileTransaction/stash-dir/IResultService.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/compileTransaction/stash-dir/module-info.class.uniqueId1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/services/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,13 +168,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="package-info" />
         <option value="AnnotationType" />
         <option value="module-info" />
         <option value="JavaScript File" />
         <option value="JSX File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -148,7 +182,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="laborator7" />
+        <entry key="$PROJECT_DIR$" value="laborator8" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -179,71 +213,71 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.server.executor": "Run",
-    "Gradle.Build mpp-proiect-java-3fara10.executor": "Run",
-    "Gradle.FrontEnd [run].executor": "Run",
-    "Gradle.Frontend [clean build].executor": "Run",
-    "Gradle.Load Gradle Dependencies.executor": "Run",
-    "Gradle.ProiectJava [:org.example.Main.main()].executor": "Run",
-    "Gradle.ProiectJava [clean build].executor": "Run",
-    "Gradle.ProiectJava [clean].executor": "Run",
-    "Gradle.ProiectJava [jar].executor": "Run",
-    "Gradle.ProiectJava [run].executor": "Run",
-    "Gradle.ProiectJava [test].executor": "Run",
-    "Gradle.ProiectJava.executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [./gradlew clean generateProto].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [:FrontEnd:build].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [FrontEnd:run > build_log.txt 2>&1].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [build].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [clean build].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [clean generateProto].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [clean].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [jar].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10 [run].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10.executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10:clientGTK [:clientGTK:org.example.StartJsonClient.main()].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10:networking [build].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10:networking [jar].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10:server [:server:org.example.server.StartGrpcServer.main()].executor": "Run",
-    "Gradle.mpp-proiect-java-3fara10:server [:server:org.example.server.StartJsonServer.main()].executor": "Run",
-    "JAR Application.ProiectJava-1.0-SNAPSHOT.jar.executor": "Run",
-    "JAR Application.gradle-wrapper.jar.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.StartRestServices.executor": "Run",
-    "git-widget-placeholder": "laborator8",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/anton/Downloads/mpp-proiect-java-3fara10-laborator4",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/frontend/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.41609195",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build mpp-proiect-java-3fara10.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.FrontEnd [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Frontend [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Load Gradle Dependencies.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ProiectJava.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [./gradlew clean generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [:FrontEnd:--info].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [:FrontEnd:build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [FrontEnd:run &gt; build_log.txt 2&gt;&amp;1].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [ProiectJava:dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [clean build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [clean generateProto].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10 [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10:clientGTK [:clientGTK:org.example.StartJsonClient.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10:networking [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10:networking [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10:server [:server:org.example.server.StartGrpcServer.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.mpp-proiect-java-3fara10:server [:server:org.example.server.StartJsonServer.main()].executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.ProiectJava-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.gradle-wrapper.jar.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.StartRestServices.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;laborator9(1)&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Downloads/mpp-proiect-java-3fara10-laborator4&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/anton/IdeaProjects/mpp-proiect-java-3fara10/frontend/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41609195&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.google.protobuf" />
@@ -558,6 +592,10 @@
       <workItem from="1746458136850" duration="2212000" />
       <workItem from="1746881381068" duration="16461000" />
       <workItem from="1747235171025" duration="6968000" />
+      <workItem from="1747421126661" duration="1922000" />
+      <workItem from="1747423340905" duration="6109000" />
+      <workItem from="1747662160765" duration="1915000" />
+      <workItem from="1748246934329" duration="2890000" />
     </task>
     <task id="LOCAL-00001" summary="commit initial pentru testarea branch-ului">
       <option name="closed" value="true" />
@@ -864,12 +902,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/org/example/server/AuthentificationService.java</url>
-          <line>90</line>
+          <line>93</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/server/src/main/java/org/example/server/ResultService.java</url>
-          <line>22</line>
+          <line>32</line>
           <properties class="org.example.server.ResultService" method="addResult">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

@@ -7,4 +7,6 @@ include 'server'
 include 'services'
 include 'RestServices'
 include 'frontend'
+include 'messaging'
+include 'rabbitMQ'
 

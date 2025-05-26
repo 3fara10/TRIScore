@@ -35,14 +35,12 @@ public class ServerJsonProxy implements IServerJsonProxy {
     private final Gson gsonFormatter;
     private final ReentrantLock lock = new ReentrantLock();
 
-
     public ServerJsonProxy(String host, int port) {
         this.host = host;
         this.port = port;
         this.responses = new LinkedBlockingQueue<>();
         this.gsonFormatter = new Gson();
     }
-
 
     @Override
     public Referee login(String username, String password, IObserver observer) throws Exception {
@@ -102,23 +100,9 @@ public class ServerJsonProxy implements IServerJsonProxy {
 
             Result result = new Result(new Event(eventId), new Participant(participantId), points);
             sendRequest(JsonProtocolUtils.createAddResultRequest(result));
-            Response response = readResponse();
+            logger.debug("addResult request sent - observer will handle refresh");
+            return Optional.of(new Result(UUID.randomUUID(), new Event(eventId, ""), new Participant(participantId, ""), points));
 
-            if (response.getType() == ResponseType.RESULT_ADDED) {
-                if (response.getResult() != null) {
-                    return Optional.of(DTOUtils.getFromDTO(response.getResult()));
-                }
-
-                return Optional.of(new Result(
-                        UUID.randomUUID(),
-                        new Event(eventId, ""),
-                        new Participant(participantId, ""),
-                        points)
-                );
-            }
-
-            throw new Exception(response.getErrorMessage() != null ?
-                    response.getErrorMessage() : "Unknown error adding result");
         } catch (Exception ex) {
             logger.error("Error in addResult: {}", ex.getMessage(), ex);
             throw ex;
@@ -134,11 +118,19 @@ public class ServerJsonProxy implements IServerJsonProxy {
 
             sendRequest(JsonProtocolUtils.createGetAllParticipantsSortedByNameRequest());
             Response response = readResponse();
-            logger.debug("getAllParticipantsSortedByName response: Type={}, Participants count={}",
-                    response.getType(),
-                    (response.getParticipants() != null ? response.getParticipants().length : 0));
 
-            if (response.getType() == ResponseType.OK || response.getType() == ResponseType.DATA_FOUND) {
+            logger.debug("getAllParticipantsSortedByName response: Type={}, ParticipantResults count={}",
+                    response.getType(),
+                    (response.getParticipantResults() != null ? response.getParticipantResults().length : 0));
+
+            if (response.getType() == ResponseType.OK) {
+                if (response.getParticipantResults() != null) {
+                    List<ParticipantResult> results = new ArrayList<>();
+                    for (var pr : response.getParticipantResults()) {
+                        results.add(DTOUtils.getFromDTO(pr));
+                    }
+                    return results;
+                }
                 if (response.getParticipants() != null) {
                     List<ParticipantResult> results = new ArrayList<>();
                     for (var p : response.getParticipants()) {
@@ -148,27 +140,19 @@ public class ServerJsonProxy implements IServerJsonProxy {
                     }
                     return results;
                 }
-
-                if (response.getParticipantResults() != null) {
-                    List<ParticipantResult> results = new ArrayList<>();
-                    for (var pr : response.getParticipantResults()) {
-                        results.add(DTOUtils.getFromDTO(pr));
-                    }
-                    return results;
-                }
             }
 
             if (response.getType() == ResponseType.ERROR) {
                 throw new Exception(response.getErrorMessage());
             }
 
+            logger.warn("Unexpected response type for getAllParticipantsSorted: {}", response.getType());
             return Collections.emptyList();
         } catch (Exception e) {
             logger.error("Error in getAllParticipantsSortedByName", e);
             throw e;
         }
     }
-
 
     @Override
     public Iterable<ParticipantResult> getParticipantsWithResultsForEvent(UUID eventId) throws Exception {
@@ -199,8 +183,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
                 throw new Exception(response.getErrorMessage());
             }
 
-            if ((response.getType() == ResponseType.OK || response.getType() == ResponseType.DATA_FOUND)
-                    && response.getParticipantResults() != null) {
+            if (response.getType() == ResponseType.OK && response.getParticipantResults() != null) {
                 List<ParticipantResult> results = new ArrayList<>();
                 for (var pr : response.getParticipantResults()) {
                     results.add(DTOUtils.getFromDTO(pr));
@@ -215,13 +198,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Registers an observer for updates.
-     *
-     * @param observer The observer to register
-     * @param refereeId The referee ID to associate with the observer
-     * @throws Exception If registration fails
-     */
     @Override
     public void registerObserver(IObserver observer, UUID refereeId) throws Exception {
         sendRequest(JsonProtocolUtils.createRegisterObserverRequest(refereeId));
@@ -232,12 +208,6 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Unregisters an observer.
-     *
-     * @param refereeId The referee ID associated with the observer
-     * @throws Exception If unregistration fails
-     */
     @Override
     public void unregisterObserver(UUID refereeId) throws Exception {
         sendRequest(JsonProtocolUtils.createUnregisterObserverRequest(refereeId));
@@ -248,27 +218,11 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Registers a new referee in the system.
-     *
-     * @param name The referee's name
-     * @param evt The event to associate with the referee
-     * @param username The referee's username
-     * @param password The referee's password
-     * @param observer The observer to be notified of updates
-     * @return The registered referee
-     * @throws Exception If registration fails
-     */
     @Override
     public Referee registerReferee(String name, Event evt, String username, String password, IObserver observer) throws Exception {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 
-    /**
-     * Handles update notifications from the server.
-     *
-     * @param response The response containing the update
-     */
     private void handleUpdate(Response response) {
         logger.debug("handleUpdate called with {}", response);
 
@@ -276,52 +230,25 @@ public class ServerJsonProxy implements IServerJsonProxy {
             logger.warn("No client registered for updates");
             return;
         }
-
-        if (response.getType() == ResponseType.UPDATE ||
-                response.getType() == ResponseType.RESULT_ADDED ||
-                response.getType() == ResponseType.OK ||
-                response.getType() == ResponseType.DATA_FOUND) {
-
-            logger.debug("Processing update notification of type: {}", response.getType());
-            try {
-                client.update();
-            } catch (Exception ex) {
-                logger.error("Error processing update for type {}", response.getType(), ex);
-            }
-        } else if (response.getType() == ResponseType.OBSERVER_REGISTERED) {
-            logger.debug("Observer registered notification");
-            try {
-                client.update();
-            } catch (Exception ex) {
-                logger.error("Error processing observer registered update", ex);
-            }
-        } else if (response.getType() == ResponseType.UNREGISTER_OBSERVER_REGISTERED) {
-            logger.debug("Unregister observer notification");
-            try {
-                client.update();
-            } catch (Exception ex) {
-                logger.error("Error processing unregister observer update", ex);
-            }
+        logger.debug("Processing update notification of type: {}", response.getType());
+        try {
+            client.update();
+            logger.debug("Client observer notified successfully");
+        } catch (Exception ex) {
+            logger.error("Error notifying client observer: {}", ex.getMessage(), ex);
         }
     }
 
-    /**
-     * Determines if a response is an update notification.
-     *
-     * @param response The response to check
-     * @return true if the response is an update notification, false otherwise
-     */
-    private boolean isUpdate(Response response) {
+    private boolean isUpdateNotification(Response response) {
         return response != null && (
                 response.getType() == ResponseType.UPDATE ||
+                        response.getType() == ResponseType.RESULT_ADDED ||  // ADD THIS!
                         response.getType() == ResponseType.OBSERVER_REGISTERED ||
-                        response.getType() == ResponseType.UNREGISTER_OBSERVER_REGISTERED ||
-                        response.getType() == ResponseType.DATA_FOUND);
+                        response.getType() == ResponseType.UNREGISTER_OBSERVER_REGISTERED
+        );
     }
 
-    /**
-     * Closes the connection to the server.
-     */
+
     private void closeConnection() {
         try {
             finished = true;
@@ -347,11 +274,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Initializes the connection to the server.
-     *
-     * @throws Exception If connection initialization fails
-     */
+
     private void initializeConnection() throws Exception {
         try {
             connection = new Socket(host, port);
@@ -365,36 +288,31 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Reads a response from the server.
-     *
-     * @return The response from the server
-     * @throws Exception If reading the response fails
-     */
-    private Response readResponse() throws Exception {
-        Response response = null;
-        try {
-            do {
-                responseLatch = new CountDownLatch(1);
-                responseLatch.await();
 
-                synchronized (responses) {
-                    if (!responses.isEmpty()) {
-                        response = responses.poll();
-                    }
+    private Response readResponse() throws Exception {
+        try {
+            responseLatch = new CountDownLatch(1);
+            boolean success = responseLatch.await(10, java.util.concurrent.TimeUnit.SECONDS);
+
+            if (!success) {
+                throw new Exception("Timeout waiting for server response");
+            }
+            synchronized (responses) {
+                if (!responses.isEmpty()) {
+                    Response response = responses.poll();
+                    logger.debug("Retrieved response from queue: {}", response);
+                    return response;
+                } else {
+                    throw new Exception("No response available after wait");
                 }
-            } while (response != null && isUpdate(response));
+            }
         } catch (Exception e) {
             logger.error("Error reading response", e);
             throw e;
         }
-
-        return response;
     }
 
-    /**
-     * Starts the reader thread for receiving responses from the server.
-     */
+
     private void startReader() {
         if (readerThread != null && readerThread.isAlive()) {
             readerThread.interrupt();
@@ -409,12 +327,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
         this.readerThread.start();
     }
 
-    /**
-     * Sends a request to the server.
-     *
-     * @param request The request to send
-     * @throws Exception If sending the request fails
-     */
+
     private void sendRequest(Request request) throws Exception {
         try {
             lock.lock();
@@ -431,9 +344,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
         }
     }
 
-    /**
-     * Reader thread run method that processes incoming responses from the server.
-     */
+
     private void run() {
         while (!finished) {
             if (connection == null || !connection.isConnected()) {
@@ -454,7 +365,7 @@ public class ServerJsonProxy implements IServerJsonProxy {
                 Response response = gsonFormatter.fromJson(responseJson, Response.class);
                 logger.debug("Deserialized response: {}", response);
 
-                if (isUpdate(response)) {
+                if (isUpdateNotification(response)) {
                     logger.debug("Processing as update notification");
                     handleUpdate(response);
                 } else {
@@ -464,9 +375,11 @@ public class ServerJsonProxy implements IServerJsonProxy {
                         logger.debug("New queue count: {}", responses.size());
                     }
 
-                    logger.debug("Signaling response latch");
-                    responseLatch.countDown();
-                    logger.debug("Response latch signaled");
+                    if (responseLatch != null) {
+                        logger.debug("Signaling response latch");
+                        responseLatch.countDown();
+                        logger.debug("Response latch signaled");
+                    }
                 }
             } catch (IOException e) {
                 logger.debug("Connection closed: {}", e.getMessage());
@@ -474,18 +387,17 @@ public class ServerJsonProxy implements IServerJsonProxy {
             } catch (Exception e) {
                 finished = true;
                 logger.error("Error in run method: {}", e.getMessage());
-                try {
-                    responseLatch.countDown();
-                } catch (Exception ex) {
-                    logger.error("Error counting down response latch: {}", ex.getMessage());
+                if (responseLatch != null) {
+                    try {
+                        responseLatch.countDown();
+                    } catch (Exception ex) {
+                        logger.error("Error counting down response latch: {}", ex.getMessage());
+                    }
                 }
             }
         }
     }
 
-    /**
-     * Closes the connection and resources when the proxy is closed.
-     */
     @Override
     public void close() throws Exception {
         try {

@@ -3,12 +3,15 @@ package org.example.server;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.service.IPasswordService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+@org.springframework.stereotype.Service
 public class BcryptPasswordService implements IPasswordService {
     private final BCryptPasswordEncoder encoder;
     private static final Logger logger = LogManager.getLogger(BcryptPasswordService.class);
 
+    @Autowired(required = false)
     public BcryptPasswordService(int workFactor) {
         if (workFactor < 10 || workFactor > 31) {
             throw new IllegalArgumentException("Work factor should be between 10 and 31");

@@ -22,7 +22,7 @@ public class HibernateUtils {
             try {
                 Configuration configuration = new Configuration().configure();
                 sessionFactory = configuration.buildSessionFactory();
-                logger.info("Hibernate SessionFactory initialized successfully using hibernate.cfg.xml");
+                logger.info("Loaded database configuration from {}", sessionFactory);
                 logger.traceExit(sessionFactory);
             } catch (Exception e) {
                 logger.error("Could not initialize Hibernate SessionFactory", e);

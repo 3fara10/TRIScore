@@ -6,13 +6,16 @@ import org.apache.logging.log4j.Logger;
 import org.example.model.ParticipantResult;
 import org.example.repository.IRepositoryDTO;
 import org.example.service.IParticipantService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.UUID;
 
+@org.springframework.stereotype.Service
 public class ParticipantService extends Service implements IParticipantService {
     private static final Logger logger = LogManager.getLogger();
     private final IRepositoryDTO repositoryDto;
 
+    @Autowired
     public ParticipantService(IRepositoryDTO repositoryDto) {
         this.repositoryDto = repositoryDto;
     }

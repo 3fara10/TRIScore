@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/RestServices" />
             <option value="$PROJECT_DIR$/clientGTK" />
             <option value="$PROJECT_DIR$/frontend" />
+            <option value="$PROJECT_DIR$/messaging" />
             <option value="$PROJECT_DIR$/model" />
             <option value="$PROJECT_DIR$/networking" />
             <option value="$PROJECT_DIR$/persistence" />

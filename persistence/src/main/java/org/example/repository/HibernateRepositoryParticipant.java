@@ -8,17 +8,20 @@ import org.example.utils.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
 import java.util.UUID;
-
+@Repository
 public class HibernateRepositoryParticipant implements IRepositoryParticipant {
 
     private final HibernateUtils hibernateUtils;
     private static final Logger logger = LogManager.getLogger(HibernateRepositoryParticipant.class);
 
+    @Autowired
     public HibernateRepositoryParticipant(Properties props) {
         logger.info("Initializing HibernateRepositoryParticipant with properties: {}", props);
         hibernateUtils = new HibernateUtils(props);
